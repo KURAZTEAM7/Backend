@@ -26,23 +26,23 @@ paths:
                 first_name:
                   type: string
                   description: ''
-                  example: tempora
+                  example: vel
                 middle_name:
                   type: string
                   description: ''
-                  example: fugiat
+                  example: in
                 last_name:
                   type: string
                   description: ''
-                  example: minus
+                  example: molestias
                 email:
                   type: string
                   description: ''
-                  example: mante.giovanna@example.org
+                  example: graham.luis@example.com
                 password:
                   type: string
                   description: ''
-                  example: ;\N)~R~
+                  example: 1rt=GoV$5L
               required:
                 - first_name
                 - middle_name
@@ -69,11 +69,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: shields.clemmie@example.com
+                  example: doyle04@example.net
                 password:
                   type: string
                   description: ''
-                  example: "#'F1M|z"
+                  example: R=T5d).(_
               required:
                 - email
                 - password
