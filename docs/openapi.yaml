@@ -26,23 +26,23 @@ paths:
                 first_name:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: quidem
                 middle_name:
                   type: string
                   description: ''
-                  example: cumque
+                  example: quo
                 last_name:
                   type: string
                   description: ''
-                  example: labore
+                  example: eligendi
                 email:
                   type: string
                   description: ''
-                  example: robert.gaylord@example.net
+                  example: dayna61@example.net
                 password:
                   type: string
                   description: ''
-                  example: 'Gw}uCbg'
+                  example: '|Lm#~oH8}#=1<0Z{d'
               required:
                 - first_name
                 - middle_name
@@ -69,11 +69,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: lakin.scarlett@example.net
+                  example: maggio.helmer@example.org
                 password:
                   type: string
                   description: ''
-                  example: '>3o|svr|Tp{P@v'
+                  example: PS%nzS
               required:
                 - email
                 - password

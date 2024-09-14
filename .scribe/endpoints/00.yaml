@@ -26,7 +26,7 @@ endpoints:
         name: first_name
         description: ''
         required: true
-        example: consequatur
+        example: quidem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -35,7 +35,7 @@ endpoints:
         name: middle_name
         description: ''
         required: true
-        example: cumque
+        example: quo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -44,7 +44,7 @@ endpoints:
         name: last_name
         description: ''
         required: true
-        example: labore
+        example: eligendi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -53,7 +53,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: robert.gaylord@example.net
+        example: dayna61@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -62,17 +62,17 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'Gw}uCbg'
+        example: '|Lm#~oH8}#=1<0Z{d'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: consequatur
-      middle_name: cumque
-      last_name: labore
-      email: robert.gaylord@example.net
-      password: 'Gw}uCbg'
+      first_name: quidem
+      middle_name: quo
+      last_name: eligendi
+      email: dayna61@example.net
+      password: '|Lm#~oH8}#=1<0Z{d'
     fileParameters: []
     responses: []
     responseFields: []
@@ -106,7 +106,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: lakin.scarlett@example.net
+        example: maggio.helmer@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -115,14 +115,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '>3o|svr|Tp{P@v'
+        example: PS%nzS
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: lakin.scarlett@example.net
-      password: '>3o|svr|Tp{P@v'
+      email: maggio.helmer@example.org
+      password: PS%nzS
     fileParameters: []
     responses: []
     responseFields: []
@@ -160,7 +160,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer fPgad643vaD5h18Zbekc6EV'
+      - 'Bearer 63Pv4ahdbcZeVEkgf56a8D1'
     controller: null
     method: null
     route: null
