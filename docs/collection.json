@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "3b0467d3-6bb5-4daa-8090-92fc2393cab8",
+        "_postman_id": "11797ba0-ae01-4753-b17c-7192a47be6d5",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"tempora\",\"middle_name\":\"fugiat\",\"last_name\":\"minus\",\"email\":\"mante.giovanna@example.org\",\"password\":\";\\\\N)~R~\"}"
+                            "raw": "{\"first_name\":\"modi\",\"middle_name\":\"nisi\",\"last_name\":\"porro\",\"email\":\"mable13@example.org\",\"password\":\"km&o~lw&D.<\\\/:%F\"}"
                         },
                         "description": "",
                         "auth": {
@@ -72,7 +72,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"shields.clemmie@example.com\",\"password\":\"#'F1M|z\"}"
+                            "raw": "{\"email\":\"fleta.nitzsche@example.org\",\"password\":\"xYeQ%jR}4}lY(HH2Oy\"}"
                         },
                         "description": "",
                         "auth": {
