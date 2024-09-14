@@ -1,0 +1,102 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/user/register:
+    post:
+      summary: ''
+      operationId: postApiUserRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: ''
+                  example: consequatur
+                middle_name:
+                  type: string
+                  description: ''
+                  example: cumque
+                last_name:
+                  type: string
+                  description: ''
+                  example: labore
+                email:
+                  type: string
+                  description: ''
+                  example: robert.gaylord@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: 'Gw}uCbg'
+              required:
+                - first_name
+                - middle_name
+                - last_name
+                - email
+                - password
+      security: []
+  /api/user/login:
+    post:
+      summary: ''
+      operationId: postApiUserLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: lakin.scarlett@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: '>3o|svr|Tp{P@v'
+              required:
+                - email
+                - password
+      security: []
+  /api/user/logout:
+    post:
+      summary: ''
+      operationId: postApiUserLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+tags:
+  -
+    name: Endpoints
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []
