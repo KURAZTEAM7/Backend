@@ -43,7 +43,7 @@ jobs:
         run: php artisan config:clear
 
       - name: Run pint
-        run: vendor/bin/pin
+        run: vendor/bin/pint
 
       - name: Generate api docs
         run: php artisan scribe:generate
