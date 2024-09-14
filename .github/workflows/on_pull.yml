@@ -7,9 +7,15 @@ on:
 jobs:
   run-before-merge:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -43,7 +49,7 @@ jobs:
         run: php artisan config:clear
 
       - name: Run pint
-        run: vendor/bin/pin
+        run: vendor/bin/pint
 
       - name: Generate api docs
         run: php artisan scribe:generate
