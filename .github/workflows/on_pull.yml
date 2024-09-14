@@ -56,5 +56,7 @@ jobs:
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_author: Author <actions@github.com>
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
