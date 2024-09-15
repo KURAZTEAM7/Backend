@@ -45,6 +45,7 @@ class AuthController extends Controller
                 'message' => 'Validation failed',
                 'errors' => $e->errors(),
             ];
+
             return response($response, 422);
         } catch (\Exception $e) {
             // Handle any other general exception
@@ -52,10 +53,10 @@ class AuthController extends Controller
                 'message' => 'An error occurred',
                 'error' => $e->getMessage(),
             ];
+
             return response($response, 500);
         }
     }
-
 
     public function login(Request $request): Response
     {
@@ -68,7 +69,7 @@ class AuthController extends Controller
 
             $user = User::where('email', $fields['email'])->first();
 
-            if (!$user || !Hash::check($fields['password'], $user->password)) {
+            if (! $user || ! Hash::check($fields['password'], $user->password)) {
                 return response(['message' => 'Invalid credentials'], 401);
             }
 
@@ -87,6 +88,7 @@ class AuthController extends Controller
                 'message' => 'Validation failed',
                 'errors' => $e->errors(),
             ];
+
             return response($response, 422);
         } catch (\Exception $e) {
             // Handle any other general exception
@@ -94,6 +96,7 @@ class AuthController extends Controller
                 'message' => 'An error occurred',
                 'error' => $e->getMessage(),
             ];
+
             return response($response, 500);
         }
     }
@@ -103,7 +106,7 @@ class AuthController extends Controller
      **/
     public function logout(Request $request): Response
     {
-        if (!auth()->check()) {
+        if (! auth()->check()) {
             return response(['message' => 'Unauthenticated'], 401);
         }
 
