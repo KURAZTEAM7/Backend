@@ -12,55 +12,90 @@ class AuthController extends Controller
     // Todo: Implement uploading profile pics
     public function register(Request $request): Response
     {
-        $fields = $request->validate([
-            'first_name' => 'required|string',
-            'middle_name' => 'required|string',
-            'last_name' => 'required|string',
-            'email' => 'required|string|unique:users',
-            'password' => 'required|string|confirmed',
-        ]);
+        try {
+            $fields = $request->validate([
+                'first_name' => 'required|string|max:100',
+                'last_name' => 'required|string|max:100',
+                'email' => 'required|string|email|unique:users|max:255',
+                'password' => 'required|string|confirmed|min:8|max:64',
+                'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=2000,max_height=2000',
+            ]);
 
-        $user = User::create([
-            'first_name' => $fields['first_name'],
-            'middle_name' => $fields['middle_name'],
-            'last_name' => $fields['last_name'],
-            'email' => $fields['email'],
-            'password' => bcrypt($fields['password']),
-        ]);
+            $user = User::create([
+                'first_name' => $fields['first_name'],
+                'middle_name' => $fields['middle_name'],
+                'last_name' => $fields['last_name'],
+                'email' => $fields['email'],
+                'picture' => $fields['picture'],
+                'password' => bcrypt($fields['password']),
+            ]);
 
-        $token = $user->createToken('ecommerce')->plainTextToken;
+            $token = $user->createToken('ecommerce')->plainTextToken;
 
-        $response = [
-            'message' => 'User registered successfully',
-            'user' => $user,
-            'token' => $token,
-        ];
+            $response = [
+                'message' => 'User registered successfully',
+                'user' => $user,
+                'token' => $token,
+            ];
 
-        return response($response, 201);
+            return response($response, 201);
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            $response = [
+                'message' => 'Validation failed',
+                'errors' => $e->errors(),
+            ];
+            return response($response, 422);
+        } catch (\Exception $e) {
+            // Handle any other general exception
+            $response = [
+                'message' => 'An error occurred',
+                'error' => $e->getMessage(),
+            ];
+            return response($response, 500);
+        }
     }
+
 
     public function login(Request $request): Response
     {
-        $fields = $request->validate([
-            'email' => 'required|string',
-            'password' => 'required|string',
-        ]);
+        try {
 
-        $user = User::where('email', $fields['email'])->first();
+            $fields = $request->validate([
+                'email' => 'required|string',
+                'password' => 'required|string',
+            ]);
 
-        if (! $user || ! Hash::check($fields['password'], $user->password)) {
-            return response(['message' => 'Invalid credentials'], 401);
+            $user = User::where('email', $fields['email'])->first();
+
+            if (!$user || !Hash::check($fields['password'], $user->password)) {
+                return response(['message' => 'Invalid credentials'], 401);
+            }
+
+            $token = $user->createToken('ecommerce')->plainTextToken;
+
+            $response = [
+                'message' => 'User logged in successfully',
+                'user' => $user,
+                'token' => $token,
+            ];
+
+            return response($response, 201);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // Return a response with the validation error message
+            $response = [
+                'message' => 'Validation failed',
+                'errors' => $e->errors(),
+            ];
+            return response($response, 422);
+        } catch (\Exception $e) {
+            // Handle any other general exception
+            $response = [
+                'message' => 'An error occurred',
+                'error' => $e->getMessage(),
+            ];
+            return response($response, 500);
         }
-
-        $token = $user->createToken('ecommerce')->plainTextToken;
-
-        $response = [
-            'message' => 'User logged in successfully',
-            'user' => $user,
-            'token' => $token,
-        ];
-
-        return response($response, 201);
     }
 
     /**
@@ -68,6 +103,10 @@ class AuthController extends Controller
      **/
     public function logout(Request $request): Response
     {
+        if (!auth()->check()) {
+            return response(['message' => 'Unauthenticated'], 401);
+        }
+
         auth()->user()->tokens()->delete();
 
         return response(['message' => 'Logout succesful'], 401);
