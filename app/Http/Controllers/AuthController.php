@@ -15,20 +15,30 @@ class AuthController extends Controller
         try {
             $fields = $request->validate([
                 'first_name' => 'required|string|max:100',
+                'middle_name' => 'required|string|max:100',
                 'last_name' => 'required|string|max:100',
                 'email' => 'required|string|email|unique:users|max:255',
                 'password' => 'required|string|confirmed|min:8|max:64',
                 'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=2000,max_height=2000',
             ]);
 
-            $user = User::create([
+            $userFields = [
                 'first_name' => $fields['first_name'],
                 'middle_name' => $fields['middle_name'],
                 'last_name' => $fields['last_name'],
                 'email' => $fields['email'],
-                'picture' => $fields['picture'],
                 'password' => bcrypt($fields['password']),
-            ]);
+            ];
+
+            if ($request->hasFile('picture')) {
+                $cloudinaryPicture = $request->file('picture')->storeOnCloudinary('user_picture');
+                $url = $cloudinaryPicture->getSecurePath();
+                $id = $cloudinaryPicture->getPublicId();
+                $userFields['picture'] = $url;
+                $userFields['picture_public_id'] = $id;
+            }
+
+            $user = User::create($userFields);
 
             $token = $user->createToken('ecommerce')->plainTextToken;
 
