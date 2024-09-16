@@ -28,7 +28,7 @@ endpoints:
         name: first_name
         description: ''
         required: true
-        example: modi
+        example: commodi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -37,7 +37,7 @@ endpoints:
         name: middle_name
         description: ''
         required: true
-        example: nisi
+        example: fugit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -46,7 +46,7 @@ endpoints:
         name: last_name
         description: ''
         required: true
-        example: porro
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -55,7 +55,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: mable13@example.org
+        example: assunta15@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -64,17 +64,17 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'km&o~lw&D.</:%F'
+        example: '_oyo(<QBC)pU_s['
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: modi
-      middle_name: nisi
-      last_name: porro
-      email: mable13@example.org
-      password: 'km&o~lw&D.</:%F'
+      first_name: commodi
+      middle_name: fugit
+      last_name: quia
+      email: assunta15@example.org
+      password: '_oyo(<QBC)pU_s['
     fileParameters: []
     responses: []
     responseFields: []
@@ -108,7 +108,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: fleta.nitzsche@example.org
+        example: kurtis.gutmann@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -117,14 +117,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'xYeQ%jR}4}lY(HH2Oy'
+        example: 'M!Bht*'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: fleta.nitzsche@example.org
-      password: 'xYeQ%jR}4}lY(HH2Oy'
+      email: kurtis.gutmann@example.org
+      password: 'M!Bht*'
     fileParameters: []
     responses: []
     responseFields: []
@@ -162,7 +162,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer baPd4Vec6D65fEk31vhZa8g'
+      - 'Bearer 6cDevP8Eb4hVfak51d6gaZ3'
     controller: null
     method: null
     route: null
