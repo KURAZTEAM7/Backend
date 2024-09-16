@@ -129,8 +129,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost/api/user/register" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "first_name=ttuyniofjqisjgiqid"\
+    --form "middle_name=tprsdiejform"\
+    --form "last_name=tohvqssbxjvnbays"\
+    --form "email=xcummerata@example.org"\
+    --form "password=!S.X|Nd*(`"x8"\
+    --form "picture=@/tmp/phpuKNho3" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -139,13 +145,22 @@ You can switch the language used with the tabs at the top right (or from the nav
 );
 
 const headers = {
-    "Content-Type": "application/json",
+    "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
+
+const body = new FormData();
+body.append('first_name', 'ttuyniofjqisjgiqid');
+body.append('middle_name', 'tprsdiejform');
+body.append('last_name', 'tohvqssbxjvnbays');
+body.append('email', 'xcummerata@example.org');
+body.append('password', '!S.X|Nd*(`"x8');
+body.append('picture', document.querySelector('input[name="picture"]').files[0]);
 
 fetch(url, {
     method: "POST",
     headers,
+    body,
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -170,7 +185,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <form id="form-POSTapi-user-register" data-method="POST"
       data-path="api/user/register"
       data-authed="0"
-      data-hasfiles="0"
+      data-hasfiles="1"
       data-isarraybody="0"
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-user-register', this);">
@@ -205,10 +220,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Content-Type"                data-endpoint="POSTapi-user-register"
-               value="application/json"
+               value="multipart/form-data"
                data-component="header">
     <br>
-<p>Example: <code>application/json</code></p>
+<p>Example: <code>multipart/form-data</code></p>
             </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
@@ -221,7 +236,74 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>first_name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="first_name"                data-endpoint="POSTapi-user-register"
+               value="ttuyniofjqisjgiqid"
+               data-component="body">
+    <br>
+<p>Must not be greater than 100 characters. Example: <code>ttuyniofjqisjgiqid</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>middle_name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="middle_name"                data-endpoint="POSTapi-user-register"
+               value="tprsdiejform"
+               data-component="body">
+    <br>
+<p>Must not be greater than 100 characters. Example: <code>tprsdiejform</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="last_name"                data-endpoint="POSTapi-user-register"
+               value="tohvqssbxjvnbays"
+               data-component="body">
+    <br>
+<p>Must not be greater than 100 characters. Example: <code>tohvqssbxjvnbays</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-user-register"
+               value="xcummerata@example.org"
+               data-component="body">
+    <br>
+<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>xcummerata@example.org</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTapi-user-register"
+               value="!S.X|Nd*(`"x8"
+               data-component="body">
+    <br>
+<p>Must be at least 8 characters. Must not be greater than 64 characters. Example: <code>!S.X|Nd*(</code>&quot;x8`</p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>picture</code></b>&nbsp;&nbsp;
+<small>file</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="file" style="display: none"
+                              name="picture"                data-endpoint="POSTapi-user-register"
+               value=""
+               data-component="body">
+    <br>
+<p>Must be an image. Must not be greater than 2048 kilobytes. Example: <code>/tmp/phpuKNho3</code></p>
+        </div>
+        </form>
 
                     <h2 id="endpoints-POSTapi-user-login">POST api/user/login</h2>
 
@@ -238,7 +320,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://localhost/api/user/login" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"email\": \"smith.josefa@example.net\",
+    \"password\": \"+&lt;,sAz,ZyYk\'p~v02T\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -251,9 +338,15 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "email": "smith.josefa@example.net",
+    "password": "+&lt;,sAz,ZyYk'p~v02T"
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -329,7 +422,30 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-user-login"
+               value="smith.josefa@example.net"
+               data-component="body">
+    <br>
+<p>Example: <code>smith.josefa@example.net</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTapi-user-login"
+               value="+<,sAz,ZyYk'p~v02T"
+               data-component="body">
+    <br>
+<p>Example: <code>+&lt;,sAz,ZyYk'p~v02T</code></p>
+        </div>
+        </form>
 
                     <h2 id="endpoints-POSTapi-user-logout">POST api/user/logout</h2>
 

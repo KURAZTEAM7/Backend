@@ -17,15 +17,75 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: ttuyniofjqisjgiqid
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      middle_name:
+        name: middle_name
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: tprsdiejform
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      last_name:
+        name: last_name
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: tohvqssbxjvnbays
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: xcummerata@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
+        required: true
+        example: '!S.X|Nd*(`"x8'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      picture:
+        name: picture
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      first_name: ttuyniofjqisjgiqid
+      middle_name: tprsdiejform
+      last_name: tohvqssbxjvnbays
+      email: xcummerata@example.org
+      password: '!S.X|Nd*(`"x8'
+    fileParameters:
+      picture: null
     responses: []
     responseFields: []
     auth: []
@@ -53,8 +113,28 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: smith.josefa@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: "+<,sAz,ZyYk'p~v02T"
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      email: smith.josefa@example.net
+      password: "+<,sAz,ZyYk'p~v02T"
     fileParameters: []
     responses: []
     responseFields: []
@@ -92,7 +172,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8fad4Ebh1gP5eDvc3VakZ66'
+      - 'Bearer 6PVdae5b48fckvhga6DZ3E1'
     controller: null
     method: null
     route: null

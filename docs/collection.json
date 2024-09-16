@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "19641df5-cc51-4f11-80fe-61e25f4b043f",
+        "_postman_id": "3ed0291e-48c2-4936-962a-deaf6e4044e0",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -32,14 +32,53 @@
                         "header": [
                             {
                                 "key": "Content-Type",
-                                "value": "application\/json"
+                                "value": "multipart\/form-data"
                             },
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "first_name",
+                                    "value": "ttuyniofjqisjgiqid",
+                                    "type": "text",
+                                    "description": "Must not be greater than 100 characters."
+                                },
+                                {
+                                    "key": "middle_name",
+                                    "value": "tprsdiejform",
+                                    "type": "text",
+                                    "description": "Must not be greater than 100 characters."
+                                },
+                                {
+                                    "key": "last_name",
+                                    "value": "tohvqssbxjvnbays",
+                                    "type": "text",
+                                    "description": "Must not be greater than 100 characters."
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "xcummerata@example.org",
+                                    "type": "text",
+                                    "description": "Must be a valid email address. Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "!S.X|Nd*(`\"x8",
+                                    "type": "text",
+                                    "description": "Must be at least 8 characters. Must not be greater than 64 characters."
+                                },
+                                {
+                                    "key": "picture",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -67,7 +106,10 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"smith.josefa@example.net\",\"password\":\"+<,sAz,ZyYk'p~v02T\"}"
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"

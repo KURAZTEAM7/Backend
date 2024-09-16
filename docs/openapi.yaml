@@ -16,6 +16,43 @@ paths:
       responses: {  }
       tags:
         - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: ttuyniofjqisjgiqid
+                middle_name:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: tprsdiejform
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: tohvqssbxjvnbays
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: xcummerata@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
+                  example: '!S.X|Nd*(`"x8'
+                picture:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+              required:
+                - first_name
+                - middle_name
+                - last_name
+                - email
+                - password
       security: []
   /api/user/login:
     post:
@@ -26,6 +63,24 @@ paths:
       responses: {  }
       tags:
         - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: smith.josefa@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: "+<,sAz,ZyYk'p~v02T"
+              required:
+                - email
+                - password
       security: []
   /api/user/logout:
     post:
