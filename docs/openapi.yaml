@@ -16,39 +16,6 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                first_name:
-                  type: string
-                  description: ''
-                  example: commodi
-                middle_name:
-                  type: string
-                  description: ''
-                  example: fugit
-                last_name:
-                  type: string
-                  description: ''
-                  example: quia
-                email:
-                  type: string
-                  description: ''
-                  example: assunta15@example.org
-                password:
-                  type: string
-                  description: ''
-                  example: '_oyo(<QBC)pU_s['
-              required:
-                - first_name
-                - middle_name
-                - last_name
-                - email
-                - password
       security: []
   /api/user/login:
     post:
@@ -59,24 +26,6 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                  description: ''
-                  example: kurtis.gutmann@example.org
-                password:
-                  type: string
-                  description: ''
-                  example: 'M!Bht*'
-              required:
-                - email
-                - password
       security: []
   /api/user/logout:
     post:

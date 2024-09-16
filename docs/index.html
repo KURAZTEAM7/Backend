@@ -130,15 +130,7 @@ You can switch the language used with the tabs at the top right (or from the nav
     <pre><code class="language-bash">curl --request POST \
     "http://localhost/api/user/register" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"first_name\": \"commodi\",
-    \"middle_name\": \"fugit\",
-    \"last_name\": \"quia\",
-    \"email\": \"assunta15@example.org\",
-    \"password\": \"_oyo(&lt;QBC)pU_s[\"
-}"
-</code></pre></div>
+    --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
@@ -149,14 +141,6 @@ You can switch the language used with the tabs at the top right (or from the nav
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
-};
-
-let body = {
-    "first_name": "commodi",
-    "middle_name": "fugit",
-    "last_name": "quia",
-    "email": "assunta15@example.org",
-    "password": "_oyo(&lt;QBC)pU_s["
 };
 
 fetch(url, {
@@ -237,63 +221,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>first_name</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="first_name"                data-endpoint="POSTapi-user-register"
-               value="commodi"
-               data-component="body">
-    <br>
-<p>Example: <code>commodi</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>middle_name</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="middle_name"                data-endpoint="POSTapi-user-register"
-               value="fugit"
-               data-component="body">
-    <br>
-<p>Example: <code>fugit</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="last_name"                data-endpoint="POSTapi-user-register"
-               value="quia"
-               data-component="body">
-    <br>
-<p>Example: <code>quia</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="email"                data-endpoint="POSTapi-user-register"
-               value="assunta15@example.org"
-               data-component="body">
-    <br>
-<p>Example: <code>assunta15@example.org</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="password"                data-endpoint="POSTapi-user-register"
-               value="_oyo(<QBC)pU_s["
-               data-component="body">
-    <br>
-<p>Example: <code>_oyo(&lt;QBC)pU_s[</code></p>
-        </div>
-        </form>
+                        </form>
 
                     <h2 id="endpoints-POSTapi-user-login">POST api/user/login</h2>
 
@@ -310,12 +238,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://localhost/api/user/login" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"email\": \"kurtis.gutmann@example.org\",
-    \"password\": \"M!Bht*\"
-}"
-</code></pre></div>
+    --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
@@ -326,11 +249,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
-};
-
-let body = {
-    "email": "kurtis.gutmann@example.org",
-    "password": "M!Bht*"
 };
 
 fetch(url, {
@@ -411,30 +329,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="email"                data-endpoint="POSTapi-user-login"
-               value="kurtis.gutmann@example.org"
-               data-component="body">
-    <br>
-<p>Example: <code>kurtis.gutmann@example.org</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="password"                data-endpoint="POSTapi-user-login"
-               value="M!Bht*"
-               data-component="body">
-    <br>
-<p>Example: <code>M!Bht*</code></p>
-        </div>
-        </form>
+                        </form>
 
                     <h2 id="endpoints-POSTapi-user-logout">POST api/user/logout</h2>
 
