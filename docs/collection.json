@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "3ed0291e-48c2-4936-962a-deaf6e4044e0",
+        "_postman_id": "dedf5f80-b195-41cc-bd71-34585d8e3b84",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -20,13 +20,13 @@
             "description": "",
             "item": [
                 {
-                    "name": "POST api\/user\/register",
+                    "name": "POST api\/auth\/register",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/user\/register",
+                            "path": "api\/auth\/register",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/user\/register"
+                            "raw": "{{baseUrl}}\/api\/auth\/register"
                         },
                         "method": "POST",
                         "header": [
@@ -44,31 +44,31 @@
                             "formdata": [
                                 {
                                     "key": "first_name",
-                                    "value": "ttuyniofjqisjgiqid",
+                                    "value": "yzihagmmugg",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "middle_name",
-                                    "value": "tprsdiejform",
+                                    "value": "rlrzsmbsja",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "last_name",
-                                    "value": "tohvqssbxjvnbays",
+                                    "value": "lryjxgzbvyhntpiwsqajxm",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "xcummerata@example.org",
+                                    "value": "kaley14@example.org",
                                     "type": "text",
                                     "description": "Must be a valid email address. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "!S.X|Nd*(`\"x8",
+                                    "value": "msZ?R>7[",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 64 characters."
                                 },
@@ -87,13 +87,13 @@
                     "response": []
                 },
                 {
-                    "name": "POST api\/user\/login",
+                    "name": "POST api\/auth\/login",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/user\/login",
+                            "path": "api\/auth\/login",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/user\/login"
+                            "raw": "{{baseUrl}}\/api\/auth\/login"
                         },
                         "method": "POST",
                         "header": [
@@ -108,7 +108,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"smith.josefa@example.net\",\"password\":\"+<,sAz,ZyYk'p~v02T\"}"
+                            "raw": "{\"email\":\"obie.marquardt@example.org\",\"password\":\"bNamL1Und\"}"
                         },
                         "description": "",
                         "auth": {
@@ -118,13 +118,13 @@
                     "response": []
                 },
                 {
-                    "name": "POST api\/user\/logout",
+                    "name": "POST api\/auth\/logout",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/user\/logout",
+                            "path": "api\/auth\/logout",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/user\/logout"
+                            "raw": "{{baseUrl}}\/api\/auth\/logout"
                         },
                         "method": "POST",
                         "header": [

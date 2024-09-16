@@ -4,7 +4,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/user/register
+    uri: api/auth/register
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -26,7 +26,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: ttuyniofjqisjgiqid
+        example: yzihagmmugg
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -35,7 +35,7 @@ endpoints:
         name: middle_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: tprsdiejform
+        example: rlrzsmbsja
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -44,7 +44,7 @@ endpoints:
         name: last_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: tohvqssbxjvnbays
+        example: lryjxgzbvyhntpiwsqajxm
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -53,7 +53,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: xcummerata@example.org
+        example: kaley14@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -62,7 +62,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
         required: true
-        example: '!S.X|Nd*(`"x8'
+        example: 'msZ?R>7['
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -77,11 +77,11 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: ttuyniofjqisjgiqid
-      middle_name: tprsdiejform
-      last_name: tohvqssbxjvnbays
-      email: xcummerata@example.org
-      password: '!S.X|Nd*(`"x8'
+      first_name: yzihagmmugg
+      middle_name: rlrzsmbsja
+      last_name: lryjxgzbvyhntpiwsqajxm
+      email: kaley14@example.org
+      password: 'msZ?R>7['
     fileParameters:
       picture: null
     responses: []
@@ -94,7 +94,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/user/login
+    uri: api/auth/login
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -116,7 +116,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: smith.josefa@example.net
+        example: obie.marquardt@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -125,14 +125,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: "+<,sAz,ZyYk'p~v02T"
+        example: bNamL1Und
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: smith.josefa@example.net
-      password: "+<,sAz,ZyYk'p~v02T"
+      email: obie.marquardt@example.org
+      password: bNamL1Und
     fileParameters: []
     responses: []
     responseFields: []
@@ -144,7 +144,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/user/logout
+    uri: api/auth/logout
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -170,7 +170,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6PVdae5b48fckvhga6DZ3E1'
+      - 'Bearer Zb6ekaVDP16dfhvE8g543ca'
     controller: null
     method: null
     route: null

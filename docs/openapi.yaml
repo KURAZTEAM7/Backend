@@ -7,10 +7,10 @@ servers:
   -
     url: 'http://localhost'
 paths:
-  /api/user/register:
+  /api/auth/register:
     post:
       summary: ''
-      operationId: postApiUserRegister
+      operationId: postApiAuthRegister
       description: ''
       parameters: []
       responses: {  }
@@ -26,23 +26,23 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: ttuyniofjqisjgiqid
+                  example: yzihagmmugg
                 middle_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: tprsdiejform
+                  example: rlrzsmbsja
                 last_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: tohvqssbxjvnbays
+                  example: lryjxgzbvyhntpiwsqajxm
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: xcummerata@example.org
+                  example: kaley14@example.org
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
-                  example: '!S.X|Nd*(`"x8'
+                  example: 'msZ?R>7['
                 picture:
                   type: string
                   format: binary
@@ -54,10 +54,10 @@ paths:
                 - email
                 - password
       security: []
-  /api/user/login:
+  /api/auth/login:
     post:
       summary: ''
-      operationId: postApiUserLogin
+      operationId: postApiAuthLogin
       description: ''
       parameters: []
       responses: {  }
@@ -73,19 +73,19 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: smith.josefa@example.net
+                  example: obie.marquardt@example.org
                 password:
                   type: string
                   description: ''
-                  example: "+<,sAz,ZyYk'p~v02T"
+                  example: bNamL1Und
               required:
                 - email
                 - password
       security: []
-  /api/user/logout:
+  /api/auth/logout:
     post:
       summary: ''
-      operationId: postApiUserLogout
+      operationId: postApiAuthLogout
       description: ''
       parameters: []
       responses: {  }
