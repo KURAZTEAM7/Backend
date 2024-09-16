@@ -6,109 +6,88 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
     // Todo: Implement uploading profile pics
     public function register(Request $request): Response
     {
-        try {
-            $fields = $request->validate([
-                'first_name' => 'required|string|max:100',
-                'middle_name' => 'required|string|max:100',
-                'last_name' => 'required|string|max:100',
-                'email' => 'required|string|email|unique:users|max:255',
-                'password' => 'required|string|confirmed|min:8|max:64',
-                'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=2000,max_height=2000',
-            ]);
+        $validator = Validator::make($request->all(), [
+            'first_name' => 'required|string|max:100',
+            'middle_name' => 'required|string|max:100',
+            'last_name' => 'required|string|max:100',
+            'email' => 'required|string|email|unique:users|max:255',
+            'password' => 'required|string|confirmed|min:8|max:64',
+            'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:min_width=100,min_height=100,max_width=2000,max_height=2000',
+        ]);
 
-            $userFields = [
-                'first_name' => $fields['first_name'],
-                'middle_name' => $fields['middle_name'],
-                'last_name' => $fields['last_name'],
-                'email' => $fields['email'],
-                'password' => bcrypt($fields['password']),
-            ];
-
-            if ($request->hasFile('picture')) {
-                $cloudinaryPicture = $request->file('picture')->storeOnCloudinary('user_picture');
-                $url = $cloudinaryPicture->getSecurePath();
-                $id = $cloudinaryPicture->getPublicId();
-                $userFields['picture'] = $url;
-                $userFields['picture_public_id'] = $id;
-            }
-
-            $user = User::create($userFields);
-
-            $token = $user->createToken('ecommerce')->plainTextToken;
-
-            $response = [
-                'message' => 'User registered successfully',
-                'user' => $user,
-                'token' => $token,
-            ];
-
-            return response($response, 201);
-
-        } catch (\Illuminate\Validation\ValidationException $e) {
+        if ($validator->fails()) {
+            // Return a response with the validation error message
             $response = [
                 'message' => 'Validation failed',
-                'errors' => $e->errors(),
+                'errors' => $validator->errors(),
             ];
 
             return response($response, 422);
-        } catch (\Exception $e) {
-            // Handle any other general exception
-            $response = [
-                'message' => 'An error occurred',
-                'error' => $e->getMessage(),
-            ];
-
-            return response($response, 500);
         }
+
+        $fields = $validator->validated();
+
+        if ($request->hasFile('picture')) {
+            $cloudinaryPicture = $request->file('picture')->storeOnCloudinary('user_picture');
+            $url = $cloudinaryPicture->getSecurePath();
+            $id = $cloudinaryPicture->getPublicId();
+            $fields['picture'] = $url;
+            $fields['picture_public_id'] = $id;
+        }
+
+        $user = User::create($fields);
+
+        $token = $user->createToken('ecommerce')->plainTextToken;
+
+        $response = [
+            'message' => 'User registered successfully',
+            'user' => $user,
+            'token' => $token,
+        ];
+
+        return response($response, 201);
     }
 
     public function login(Request $request): Response
     {
-        try {
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string',
+            'password' => 'required|string',
+        ]);
 
-            $fields = $request->validate([
-                'email' => 'required|string',
-                'password' => 'required|string',
-            ]);
-
-            $user = User::where('email', $fields['email'])->first();
-
-            if (! $user || ! Hash::check($fields['password'], $user->password)) {
-                return response(['message' => 'Invalid credentials'], 401);
-            }
-
-            $token = $user->createToken('ecommerce')->plainTextToken;
-
-            $response = [
-                'message' => 'User logged in successfully',
-                'user' => $user,
-                'token' => $token,
-            ];
-
-            return response($response, 201);
-        } catch (\Illuminate\Validation\ValidationException $e) {
+        if ($validator->fails()) {
             // Return a response with the validation error message
             $response = [
                 'message' => 'Validation failed',
-                'errors' => $e->errors(),
+                'errors' => $validator->errors(),
             ];
 
             return response($response, 422);
-        } catch (\Exception $e) {
-            // Handle any other general exception
-            $response = [
-                'message' => 'An error occurred',
-                'error' => $e->getMessage(),
-            ];
-
-            return response($response, 500);
         }
+
+        $fields = $validator->validated();
+        $user = User::where('email', $fields['email'])->first();
+
+        if (! $user || ! Hash::check($fields['password'], $user->password)) {
+            return response(['message' => 'Invalid credentials'], 401);
+        }
+
+        $token = $user->createToken('ecommerce')->plainTextToken;
+
+        $response = [
+            'message' => 'User logged in successfully',
+            'user' => $user,
+            'token' => $token,
+        ];
+
+        return response($response, 201);
     }
 
     /**
