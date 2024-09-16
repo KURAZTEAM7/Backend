@@ -50,6 +50,15 @@ Add necessary symbolic links for storing files
 php artisan storage:link
 ```
 
+Open a [Cloudinary](https://cloudinary.com/) account to enable image uploads.
+Go to the [Cloudinary dashboard](https://cloudinary.com/console) to get the
+API environment variable, then copy it to you local .env file as follows:
+
+```
+CLOUDINARY_URL=cloudinary://xxxxxxxxxxxxxxxxxxx
+
+```
+
 To use the dev server, run the following commands in a persistent terminal window
 
 ```
