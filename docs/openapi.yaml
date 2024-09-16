@@ -7,10 +7,10 @@ servers:
   -
     url: 'http://localhost'
 paths:
-  /api/user/register:
+  /api/auth/register:
     post:
       summary: ''
-      operationId: postApiUserRegister
+      operationId: postApiAuthRegister
       description: ''
       parameters: []
       responses: {  }
@@ -19,30 +19,34 @@ paths:
       requestBody:
         required: true
         content:
-          application/json:
+          multipart/form-data:
             schema:
               type: object
               properties:
                 first_name:
                   type: string
-                  description: ''
-                  example: commodi
+                  description: 'Must not be greater than 100 characters.'
+                  example: yzihagmmugg
                 middle_name:
                   type: string
-                  description: ''
-                  example: fugit
+                  description: 'Must not be greater than 100 characters.'
+                  example: rlrzsmbsja
                 last_name:
                   type: string
-                  description: ''
-                  example: quia
+                  description: 'Must not be greater than 100 characters.'
+                  example: lryjxgzbvyhntpiwsqajxm
                 email:
                   type: string
-                  description: ''
-                  example: assunta15@example.org
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: kaley14@example.org
                 password:
                   type: string
-                  description: ''
-                  example: '_oyo(<QBC)pU_s['
+                  description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
+                  example: 'msZ?R>7['
+                picture:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
               required:
                 - first_name
                 - middle_name
@@ -50,10 +54,10 @@ paths:
                 - email
                 - password
       security: []
-  /api/user/login:
+  /api/auth/login:
     post:
       summary: ''
-      operationId: postApiUserLogin
+      operationId: postApiAuthLogin
       description: ''
       parameters: []
       responses: {  }
@@ -69,19 +73,19 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: kurtis.gutmann@example.org
+                  example: obie.marquardt@example.org
                 password:
                   type: string
                   description: ''
-                  example: 'M!Bht*'
+                  example: bNamL1Und
               required:
                 - email
                 - password
       security: []
-  /api/user/logout:
+  /api/auth/logout:
     post:
       summary: ''
-      operationId: postApiUserLogout
+      operationId: postApiAuthLogout
       description: ''
       parameters: []
       responses: {  }

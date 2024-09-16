@@ -4,7 +4,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/user/register
+    uri: api/auth/register
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -15,7 +15,7 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -24,56 +24,66 @@ endpoints:
     bodyParameters:
       first_name:
         name: first_name
-        description: ''
+        description: 'Must not be greater than 100 characters.'
         required: true
-        example: commodi
+        example: yzihagmmugg
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       middle_name:
         name: middle_name
-        description: ''
+        description: 'Must not be greater than 100 characters.'
         required: true
-        example: fugit
+        example: rlrzsmbsja
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       last_name:
         name: last_name
-        description: ''
+        description: 'Must not be greater than 100 characters.'
         required: true
-        example: quia
+        example: lryjxgzbvyhntpiwsqajxm
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       email:
         name: email
-        description: ''
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: assunta15@example.org
+        example: kaley14@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       password:
         name: password
-        description: ''
+        description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
         required: true
-        example: '_oyo(<QBC)pU_s['
+        example: 'msZ?R>7['
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
+      picture:
+        name: picture
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
     cleanBodyParameters:
-      first_name: commodi
-      middle_name: fugit
-      last_name: quia
-      email: assunta15@example.org
-      password: '_oyo(<QBC)pU_s['
-    fileParameters: []
+      first_name: yzihagmmugg
+      middle_name: rlrzsmbsja
+      last_name: lryjxgzbvyhntpiwsqajxm
+      email: kaley14@example.org
+      password: 'msZ?R>7['
+    fileParameters:
+      picture: null
     responses: []
     responseFields: []
     auth: []
@@ -84,7 +94,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/user/login
+    uri: api/auth/login
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -106,7 +116,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: kurtis.gutmann@example.org
+        example: obie.marquardt@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -115,14 +125,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'M!Bht*'
+        example: bNamL1Und
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: kurtis.gutmann@example.org
-      password: 'M!Bht*'
+      email: obie.marquardt@example.org
+      password: bNamL1Und
     fileParameters: []
     responses: []
     responseFields: []
@@ -134,7 +144,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/user/logout
+    uri: api/auth/logout
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -160,7 +170,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6cDevP8Eb4hVfak51d6gaZ3'
+      - 'Bearer Zb6ekaVDP16dfhvE8g543ca'
     controller: null
     method: null
     route: null

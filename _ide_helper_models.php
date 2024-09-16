@@ -21,6 +21,7 @@ namespace App\Models{
  * @property string $last_name
  * @property string $email
  * @property string|null $picture
+ * @property string|null $picture_public_id
  * @property \Illuminate\Support\Carbon|null $email_verified_at
  * @property mixed $password
  * @property string|null $remember_token
@@ -43,6 +44,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User whereMiddleName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePicture($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User wherePicturePublicId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  */
