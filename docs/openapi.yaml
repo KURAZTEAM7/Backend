@@ -26,23 +26,23 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: yzihagmmugg
+                  example: ydqfltwzqjukwzk
                 middle_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: rlrzsmbsja
+                  example: axixhhlixmnsxtlhfwkos
                 last_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: lryjxgzbvyhntpiwsqajxm
+                  example: pewkupmiagcertotywuhoo
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: kaley14@example.org
+                  example: abraham.lehner@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
-                  example: 'msZ?R>7['
+                  example: "g1!'@.{doiR_WLV?*.8m"
                 picture:
                   type: string
                   format: binary
@@ -73,11 +73,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: obie.marquardt@example.org
+                  example: uchamplin@example.org
                 password:
                   type: string
                   description: ''
-                  example: bNamL1Und
+                  example: 'o5x[8jFI[e1\.H'
               required:
                 - email
                 - password
@@ -91,6 +91,83 @@ paths:
       responses: {  }
       tags:
         - Endpoints
+  /api/vendor/register:
+    post:
+      summary: ''
+      operationId: postApiVendorRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                store_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: kcohboetqdcrexvgylvbnmoe
+                phone_number:
+                  type: string
+                  description: 'Must not be greater than 15 characters.'
+                  example: sk
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: tking@example.org
+                logo:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                zone:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mywjpbuugwploxxkp
+                region:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: yfec
+                google_map_location:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: njukzwrqwxsko
+                website:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: pcrywnqrrnlrvvlmiychstqn
+                telegram:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: hbyye
+                whatsapp:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: exhobaaytsqwttfogpr
+                tin_number:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: ctc
+                license:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+                description:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: 'Adipisci quam eos accusantium eligendi.'
+              required:
+                - store_name
+                - phone_number
+                - email
+                - zone
+                - region
+                - tin_number
+                - license
+      security: []
 tags:
   -
     name: Endpoints

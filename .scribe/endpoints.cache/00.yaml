@@ -28,7 +28,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: yzihagmmugg
+        example: ydqfltwzqjukwzk
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -37,7 +37,7 @@ endpoints:
         name: middle_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: rlrzsmbsja
+        example: axixhhlixmnsxtlhfwkos
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -46,7 +46,7 @@ endpoints:
         name: last_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: lryjxgzbvyhntpiwsqajxm
+        example: pewkupmiagcertotywuhoo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -55,7 +55,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: kaley14@example.org
+        example: abraham.lehner@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -64,7 +64,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
         required: true
-        example: 'msZ?R>7['
+        example: "g1!'@.{doiR_WLV?*.8m"
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -79,11 +79,11 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: yzihagmmugg
-      middle_name: rlrzsmbsja
-      last_name: lryjxgzbvyhntpiwsqajxm
-      email: kaley14@example.org
-      password: 'msZ?R>7['
+      first_name: ydqfltwzqjukwzk
+      middle_name: axixhhlixmnsxtlhfwkos
+      last_name: pewkupmiagcertotywuhoo
+      email: abraham.lehner@example.com
+      password: "g1!'@.{doiR_WLV?*.8m"
     fileParameters:
       picture: null
     responses: []
@@ -118,7 +118,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: obie.marquardt@example.org
+        example: uchamplin@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -127,14 +127,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: bNamL1Und
+        example: 'o5x[8jFI[e1\.H'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: obie.marquardt@example.org
-      password: bNamL1Und
+      email: uchamplin@example.org
+      password: 'o5x[8jFI[e1\.H'
     fileParameters: []
     responses: []
     responseFields: []
@@ -172,7 +172,167 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Zb6ekaVDP16dfhvE8g543ca'
+      - 'Bearer D85aVEh6f3b1kdv6cPa4Zge'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/vendor/register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      store_name:
+        name: store_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: kcohboetqdcrexvgylvbnmoe
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      phone_number:
+        name: phone_number
+        description: 'Must not be greater than 15 characters.'
+        required: true
+        example: sk
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: tking@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      logo:
+        name: logo
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      zone:
+        name: zone
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: mywjpbuugwploxxkp
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      region:
+        name: region
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: yfec
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      google_map_location:
+        name: google_map_location
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: njukzwrqwxsko
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      website:
+        name: website
+        description: 'Must be a valid URL. Must not be greater than 255 characters.'
+        required: false
+        example: pcrywnqrrnlrvvlmiychstqn
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      telegram:
+        name: telegram
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: hbyye
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      whatsapp:
+        name: whatsapp
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: exhobaaytsqwttfogpr
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      tin_number:
+        name: tin_number
+        description: 'Must not be greater than 20 characters.'
+        required: true
+        example: ctc
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      license:
+        name: license
+        description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: 'Must not be greater than 1000 characters.'
+        required: false
+        example: 'Adipisci quam eos accusantium eligendi.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      store_name: kcohboetqdcrexvgylvbnmoe
+      phone_number: sk
+      email: tking@example.org
+      zone: mywjpbuugwploxxkp
+      region: yfec
+      google_map_location: njukzwrqwxsko
+      website: pcrywnqrrnlrvvlmiychstqn
+      telegram: hbyye
+      whatsapp: exhobaaytsqwttfogpr
+      tin_number: ctc
+      description: 'Adipisci quam eos accusantium eligendi.'
+    fileParameters:
+      logo: null
+      license: null
+    responses: []
+    responseFields: []
+    auth: []
     controller: null
     method: null
     route: null

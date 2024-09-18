@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "dedf5f80-b195-41cc-bd71-34585d8e3b84",
+        "_postman_id": "94f19e70-1029-4886-8440-e1a6a9fabf28",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -44,31 +44,31 @@
                             "formdata": [
                                 {
                                     "key": "first_name",
-                                    "value": "yzihagmmugg",
+                                    "value": "ydqfltwzqjukwzk",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "middle_name",
-                                    "value": "rlrzsmbsja",
+                                    "value": "axixhhlixmnsxtlhfwkos",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "last_name",
-                                    "value": "lryjxgzbvyhntpiwsqajxm",
+                                    "value": "pewkupmiagcertotywuhoo",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "kaley14@example.org",
+                                    "value": "abraham.lehner@example.com",
                                     "type": "text",
                                     "description": "Must be a valid email address. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "msZ?R>7[",
+                                    "value": "g1!'@.{doiR_WLV?*.8m",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 64 characters."
                                 },
@@ -108,7 +108,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"obie.marquardt@example.org\",\"password\":\"bNamL1Und\"}"
+                            "raw": "{\"email\":\"uchamplin@example.org\",\"password\":\"o5x[8jFI[e1\\\\.H\"}"
                         },
                         "description": "",
                         "auth": {
@@ -139,6 +139,114 @@
                         ],
                         "body": null,
                         "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/vendor\/register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/vendor\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/vendor\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "store_name",
+                                    "value": "kcohboetqdcrexvgylvbnmoe",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "sk",
+                                    "type": "text",
+                                    "description": "Must not be greater than 15 characters."
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "tking@example.org",
+                                    "type": "text",
+                                    "description": "Must be a valid email address."
+                                },
+                                {
+                                    "key": "zone",
+                                    "value": "mywjpbuugwploxxkp",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "region",
+                                    "value": "yfec",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "google_map_location",
+                                    "value": "njukzwrqwxsko",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "website",
+                                    "value": "pcrywnqrrnlrvvlmiychstqn",
+                                    "type": "text",
+                                    "description": "Must be a valid URL. Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "telegram",
+                                    "value": "hbyye",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "whatsapp",
+                                    "value": "exhobaaytsqwttfogpr",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "tin_number",
+                                    "value": "ctc",
+                                    "type": "text",
+                                    "description": "Must not be greater than 20 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "Adipisci quam eos accusantium eligendi.",
+                                    "type": "text",
+                                    "description": "Must not be greater than 1000 characters."
+                                },
+                                {
+                                    "key": "logo",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "license",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": []
                 }

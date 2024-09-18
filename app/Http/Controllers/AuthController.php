@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
@@ -62,35 +61,35 @@ class AuthController extends Controller
             'email' => 'required|string',
             'password' => 'required|string',
         ]);
-        
+
         if ($validator->fails()) {
             // Return a response with the validation error message
             $response = [
                 'message' => 'Validation failed',
                 'errors' => $validator->errors(),
             ];
-            
+
             return response($response, 422);
         }
-        
+
         $fields = $validator->validated();
         $user = User::where('email', $fields['email'])->first();
-        
+
         if (! $user || ! Hash::check($fields['password'], $user->password)) {
             return response(['message' => 'Invalid credentials'], 401);
         }
-        
+
         $token = $user->createToken('ecommerce')->plainTextToken;
-        
+
         $response = [
             'message' => 'User logged in successfully',
             'user' => $user,
             'token' => $token,
         ];
-        
+
         return response($response, 201);
     }
-    
+
     /**
      * @authenticated
      **/

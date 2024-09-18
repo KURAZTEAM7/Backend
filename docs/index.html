@@ -80,6 +80,9 @@
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-auth-logout">
                                 <a href="#endpoints-POSTapi-auth-logout">POST api/auth/logout</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-vendor-register">
+                                <a href="#endpoints-POSTapi-vendor-register">POST api/vendor/register</a>
+                            </li>
                                                                         </ul>
                             </ul>
             </div>
@@ -91,7 +94,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: September 16, 2024</li>
+        <li>Last updated: September 18, 2024</li>
     </ul>
 </div>
 
@@ -131,12 +134,12 @@ You can switch the language used with the tabs at the top right (or from the nav
     "http://localhost/api/auth/register" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "first_name=yzihagmmugg"\
-    --form "middle_name=rlrzsmbsja"\
-    --form "last_name=lryjxgzbvyhntpiwsqajxm"\
-    --form "email=kaley14@example.org"\
-    --form "password=msZ?R&gt;7["\
-    --form "picture=@/tmp/phpdgSryU" </code></pre></div>
+    --form "first_name=ydqfltwzqjukwzk"\
+    --form "middle_name=axixhhlixmnsxtlhfwkos"\
+    --form "last_name=pewkupmiagcertotywuhoo"\
+    --form "email=abraham.lehner@example.com"\
+    --form "password=g1!'@.{doiR_WLV?*.8m"\
+    --form "picture=@/tmp/phpHRRRSU" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -150,11 +153,11 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('first_name', 'yzihagmmugg');
-body.append('middle_name', 'rlrzsmbsja');
-body.append('last_name', 'lryjxgzbvyhntpiwsqajxm');
-body.append('email', 'kaley14@example.org');
-body.append('password', 'msZ?R&gt;7[');
+body.append('first_name', 'ydqfltwzqjukwzk');
+body.append('middle_name', 'axixhhlixmnsxtlhfwkos');
+body.append('last_name', 'pewkupmiagcertotywuhoo');
+body.append('email', 'abraham.lehner@example.com');
+body.append('password', 'g1!'@.{doiR_WLV?*.8m');
 body.append('picture', document.querySelector('input[name="picture"]').files[0]);
 
 fetch(url, {
@@ -243,10 +246,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="first_name"                data-endpoint="POSTapi-auth-register"
-               value="yzihagmmugg"
+               value="ydqfltwzqjukwzk"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>yzihagmmugg</code></p>
+<p>Must not be greater than 100 characters. Example: <code>ydqfltwzqjukwzk</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>middle_name</code></b>&nbsp;&nbsp;
@@ -254,10 +257,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="middle_name"                data-endpoint="POSTapi-auth-register"
-               value="rlrzsmbsja"
+               value="axixhhlixmnsxtlhfwkos"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>rlrzsmbsja</code></p>
+<p>Must not be greater than 100 characters. Example: <code>axixhhlixmnsxtlhfwkos</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -265,10 +268,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="POSTapi-auth-register"
-               value="lryjxgzbvyhntpiwsqajxm"
+               value="pewkupmiagcertotywuhoo"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>lryjxgzbvyhntpiwsqajxm</code></p>
+<p>Must not be greater than 100 characters. Example: <code>pewkupmiagcertotywuhoo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -276,10 +279,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth-register"
-               value="kaley14@example.org"
+               value="abraham.lehner@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>kaley14@example.org</code></p>
+<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>abraham.lehner@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -287,10 +290,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth-register"
-               value="msZ?R>7["
+               value="g1!'@.{doiR_WLV?*.8m"
                data-component="body">
     <br>
-<p>Must be at least 8 characters. Must not be greater than 64 characters. Example: <code>msZ?R&gt;7[</code></p>
+<p>Must be at least 8 characters. Must not be greater than 64 characters. Example: <code>g1!'@.{doiR_WLV?*.8m</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>picture</code></b>&nbsp;&nbsp;
@@ -301,7 +304,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Must not be greater than 2048 kilobytes. Example: <code>/tmp/phpdgSryU</code></p>
+<p>Must be an image. Must not be greater than 2048 kilobytes. Example: <code>/tmp/phpHRRRSU</code></p>
         </div>
         </form>
 
@@ -322,8 +325,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"obie.marquardt@example.org\",
-    \"password\": \"bNamL1Und\"
+    \"email\": \"uchamplin@example.org\",
+    \"password\": \"o5x[8jFI[e1\\\\.H\"
 }"
 </code></pre></div>
 
@@ -339,8 +342,8 @@ const headers = {
 };
 
 let body = {
-    "email": "obie.marquardt@example.org",
-    "password": "bNamL1Und"
+    "email": "uchamplin@example.org",
+    "password": "o5x[8jFI[e1\\.H"
 };
 
 fetch(url, {
@@ -429,10 +432,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth-login"
-               value="obie.marquardt@example.org"
+               value="uchamplin@example.org"
                data-component="body">
     <br>
-<p>Example: <code>obie.marquardt@example.org</code></p>
+<p>Example: <code>uchamplin@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -440,10 +443,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth-login"
-               value="bNamL1Und"
+               value="o5x[8jFI[e1\.H"
                data-component="body">
     <br>
-<p>Example: <code>bNamL1Und</code></p>
+<p>Example: <code>o5x[8jFI[e1\.H</code></p>
         </div>
         </form>
 
@@ -568,6 +571,287 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <p>Example: <code>application/json</code></p>
             </div>
                         </form>
+
+                    <h2 id="endpoints-POSTapi-vendor-register">POST api/vendor/register</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-vendor-register">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/vendor/register" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "store_name=kcohboetqdcrexvgylvbnmoe"\
+    --form "phone_number=sk"\
+    --form "email=tking@example.org"\
+    --form "zone=mywjpbuugwploxxkp"\
+    --form "region=yfec"\
+    --form "google_map_location=njukzwrqwxsko"\
+    --form "website=pcrywnqrrnlrvvlmiychstqn"\
+    --form "telegram=hbyye"\
+    --form "whatsapp=exhobaaytsqwttfogpr"\
+    --form "tin_number=ctc"\
+    --form "description=Adipisci quam eos accusantium eligendi."\
+    --form "logo=@/tmp/phpZfIfrX" \
+    --form "license=@/tmp/phpbmQhlN" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/vendor/register"
+);
+
+const headers = {
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('store_name', 'kcohboetqdcrexvgylvbnmoe');
+body.append('phone_number', 'sk');
+body.append('email', 'tking@example.org');
+body.append('zone', 'mywjpbuugwploxxkp');
+body.append('region', 'yfec');
+body.append('google_map_location', 'njukzwrqwxsko');
+body.append('website', 'pcrywnqrrnlrvvlmiychstqn');
+body.append('telegram', 'hbyye');
+body.append('whatsapp', 'exhobaaytsqwttfogpr');
+body.append('tin_number', 'ctc');
+body.append('description', 'Adipisci quam eos accusantium eligendi.');
+body.append('logo', document.querySelector('input[name="logo"]').files[0]);
+body.append('license', document.querySelector('input[name="license"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-vendor-register">
+</span>
+<span id="execution-results-POSTapi-vendor-register" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-vendor-register"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-vendor-register"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-vendor-register" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-vendor-register">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-vendor-register" data-method="POST"
+      data-path="api/vendor/register"
+      data-authed="0"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-vendor-register', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-vendor-register"
+                    onclick="tryItOut('POSTapi-vendor-register');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-vendor-register"
+                    onclick="cancelTryOut('POSTapi-vendor-register');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-vendor-register"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/vendor/register</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-vendor-register"
+               value="multipart/form-data"
+               data-component="header">
+    <br>
+<p>Example: <code>multipart/form-data</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-vendor-register"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>store_name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="store_name"                data-endpoint="POSTapi-vendor-register"
+               value="kcohboetqdcrexvgylvbnmoe"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>kcohboetqdcrexvgylvbnmoe</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>phone_number</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="phone_number"                data-endpoint="POSTapi-vendor-register"
+               value="sk"
+               data-component="body">
+    <br>
+<p>Must not be greater than 15 characters. Example: <code>sk</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-vendor-register"
+               value="tking@example.org"
+               data-component="body">
+    <br>
+<p>Must be a valid email address. Example: <code>tking@example.org</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>logo</code></b>&nbsp;&nbsp;
+<small>file</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="file" style="display: none"
+                              name="logo"                data-endpoint="POSTapi-vendor-register"
+               value=""
+               data-component="body">
+    <br>
+<p>Must be an image. Must not be greater than 2048 kilobytes. Example: <code>/tmp/phpZfIfrX</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>zone</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="zone"                data-endpoint="POSTapi-vendor-register"
+               value="mywjpbuugwploxxkp"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>mywjpbuugwploxxkp</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>region</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="region"                data-endpoint="POSTapi-vendor-register"
+               value="yfec"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>yfec</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>google_map_location</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="google_map_location"                data-endpoint="POSTapi-vendor-register"
+               value="njukzwrqwxsko"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>njukzwrqwxsko</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>website</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="website"                data-endpoint="POSTapi-vendor-register"
+               value="pcrywnqrrnlrvvlmiychstqn"
+               data-component="body">
+    <br>
+<p>Must be a valid URL. Must not be greater than 255 characters. Example: <code>pcrywnqrrnlrvvlmiychstqn</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>telegram</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="telegram"                data-endpoint="POSTapi-vendor-register"
+               value="hbyye"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>hbyye</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>whatsapp</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="whatsapp"                data-endpoint="POSTapi-vendor-register"
+               value="exhobaaytsqwttfogpr"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>exhobaaytsqwttfogpr</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>tin_number</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="tin_number"                data-endpoint="POSTapi-vendor-register"
+               value="ctc"
+               data-component="body">
+    <br>
+<p>Must not be greater than 20 characters. Example: <code>ctc</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>license</code></b>&nbsp;&nbsp;
+<small>file</small>&nbsp;
+ &nbsp;
+                <input type="file" style="display: none"
+                              name="license"                data-endpoint="POSTapi-vendor-register"
+               value=""
+               data-component="body">
+    <br>
+<p>Must be a file. Must not be greater than 2048 kilobytes. Example: <code>/tmp/phpbmQhlN</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="POSTapi-vendor-register"
+               value="Adipisci quam eos accusantium eligendi."
+               data-component="body">
+    <br>
+<p>Must not be greater than 1000 characters. Example: <code>Adipisci quam eos accusantium eligendi.</code></p>
+        </div>
+        </form>
 
             
 

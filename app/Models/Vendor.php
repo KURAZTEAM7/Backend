@@ -25,6 +25,6 @@ class Vendor extends Model
         'license',
         'logo_public_id',
         'license_public_id',
-        'description'
+        'description',
     ];  // TODO: check if logo_public_id needs to be here
 }

@@ -20,4 +20,3 @@ class AddTimestampsToVendorsTable extends Migration
         });
     }
 }
-

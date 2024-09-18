@@ -10,4 +10,4 @@ Route::post('/auth/logout', [AuthController::class, 'logout'])
     ->middleware('auth:sanctum');
 
 Route::post('/vendor/register', [VendorController::class, 'store'])
-        ->middleware('auth:sanctum');
+    ->middleware('auth:sanctum');

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Vendor;
 use App\Services\Vendor\VendorHelper;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class VendorController extends Controller
@@ -41,7 +40,7 @@ class VendorController extends Controller
         // Validate the license
         $licenseValidation = $this->validateLicense($request->file('license'), $fields['tin_number']);
 
-        if (!$licenseValidation['isValid']) {
+        if (! $licenseValidation['isValid']) {
             return response()->json([
                 'message' => 'Invalid License',
                 'error' => $licenseValidation['error'],
@@ -83,7 +82,7 @@ class VendorController extends Controller
             ];
         }
 
-        if (!VendorHelper::validateWithAPI($qrUrl, $tinScanned)) {
+        if (! VendorHelper::validateWithAPI($qrUrl, $tinScanned)) {
             return [
                 'isValid' => false,
                 'error' => 'No valid business license was found in the attached document; please check the expiration date.',
@@ -96,6 +95,7 @@ class VendorController extends Controller
     private function uploadToCloudinary($file, $folder)
     {
         $upload = $file->storeOnCloudinary($folder);
+
         return [$upload->getSecurePath(), $upload->getPublicId()];
     }
 }
