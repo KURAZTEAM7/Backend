@@ -4,8 +4,64 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0790b3fd87de78d7386ec901089f8220",
+    "content-hash": "3ac4e6b2215a7aaff7db400142544c8e",
     "packages": [
+        {
+            "name": "andegna/calender",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andegna/calender.git",
+                "reference": "bbbdbad83dd78cffc7d30ca6caa876b8aeca3cc8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andegna/calender/zipball/bbbdbad83dd78cffc7d30ca6caa876b8aeca3cc8",
+                "reference": "bbbdbad83dd78cffc7d30ca6caa876b8aeca3cc8",
+                "shasum": ""
+            },
+            "require": {
+                "geezify/geezify-php": "^1.2",
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "develop": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Andegna\\": "src/",
+                    "Andegna\\PHPUnit\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam As End",
+                    "email": "4sam21@gmail.com"
+                }
+            ],
+            "description": "If you ever want to convert Ethiopian Calender to any other calender system (like the Gregorian Calender) this is the right package for you. And by the way it also support Amharic date formatting and much much more.",
+            "keywords": [
+                "JDN",
+                "calender",
+                "date",
+                "ethiopian"
+            ],
+            "support": {
+                "issues": "https://github.com/andegna/calender/issues",
+                "source": "https://github.com/andegna/calender"
+            },
+            "time": "2023-07-21T00:42:29+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.12.1",
@@ -776,6 +832,65 @@
             "time": "2023-10-12T05:21:21+00:00"
         },
         {
+            "name": "geezify/geezify-php",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geezify/geezify-php.git",
+                "reference": "2901449a22f9e88b58daad0b13770f322495a76d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geezify/geezify-php/zipball/2901449a22f9e88b58daad0b13770f322495a76d",
+                "reference": "2901449a22f9e88b58daad0b13770f322495a76d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6|7.*"
+            },
+            "provide": {
+                "andegna/geezify": "self.version"
+            },
+            "replace": {
+                "andegna/geezify": "self.version"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Geezify\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam As End",
+                    "email": "4sam21@gmail.com"
+                }
+            ],
+            "description": "A library to convert ascii number like '3456' to geez number '፴፬፻፶፮' and vise versa.",
+            "keywords": [
+                "ethiopian",
+                "geez",
+                "geezify"
+            ],
+            "support": {
+                "issues": "https://github.com/geezify/geezify-php/issues",
+                "source": "https://github.com/geezify/geezify-php/tree/develop"
+            },
+            "time": "2017-02-24T13:52:50+00:00"
+        },
+        {
             "name": "graham-campbell/result-type",
             "version": "v1.1.3",
             "source": {
@@ -1247,6 +1362,64 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "khanamiryan/qrcode-detector-decoder",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/khanamiryan/php-qrcode-detector-decoder.git",
+                "reference": "8d53cbecaa32f1e56a3be58bb3055ac31774ecd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/khanamiryan/php-qrcode-detector-decoder/zipball/8d53cbecaa32f1e56a3be58bb3055ac31774ecd0",
+                "reference": "8d53cbecaa32f1e56a3be58bb3055ac31774ecd0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5 | ^8.0 | ^9.0",
+                "rector/rector": "^0.13.6",
+                "symplify/easy-coding-standard": "^11.0",
+                "vimeo/psalm": "^4.24"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/Common/customFunctions.php"
+                ],
+                "psr-4": {
+                    "Zxing\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Ashot Khanamiryan",
+                    "email": "a.khanamiryan@gmail.com",
+                    "homepage": "https://github.com/khanamiryan",
+                    "role": "Developer"
+                }
+            ],
+            "description": "QR code decoder / reader",
+            "homepage": "https://github.com/khanamiryan/php-qrcode-detector-decoder/",
+            "keywords": [
+                "barcode",
+                "qr",
+                "zxing"
+            ],
+            "support": {
+                "issues": "https://github.com/khanamiryan/php-qrcode-detector-decoder/issues",
+                "source": "https://github.com/khanamiryan/php-qrcode-detector-decoder/tree/2.0.2"
+            },
+            "time": "2022-11-17T10:54:53+00:00"
         },
         {
             "name": "laravel/framework",
