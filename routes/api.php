@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\VendorController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 Route::post('/auth/register', [AuthController::class, 'register']);
 Route::post('/auth/login', [AuthController::class, 'login']);
@@ -25,3 +26,6 @@ Route::get('/category/products/{category}', [CategoryController::class, 'show'])
             'message' => 'Category does not exist',
         ]);
     });
+Route::apiResource('products', ProductController::class);
+Route::post('products', [ProductController::class, 'store'])->middleware('auth:api');
+Route::post('products/{id}', [ProductController::class, 'update'])->middleware('auth:api');
