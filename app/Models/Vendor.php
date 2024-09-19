@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Vendor extends Model
 {
@@ -27,4 +28,8 @@ class Vendor extends Model
         'license_public_id',
         'description',
     ];  // TODO: check if logo_public_id needs to be here
+
+    public function user(): BelongsTo {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('vendors', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');  // Foreign key to the user
+            $table->unsignedBigInteger('user_id')->unique();  // Foreign key to the user
 
             $table->string('store_name');  // Store name
             $table->string('phone_number');
@@ -43,6 +43,7 @@ return new class extends Migration
                 ->default('pending');
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

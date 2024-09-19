@@ -4,12 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Vendor;
 use App\Services\Vendor\VendorHelper;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Validator;
 
 class VendorController extends Controller
 {
-    public function store(Request $request)
+    /**
+     * @authenticated
+     **/
+    public function store(Request $request): JsonResponse
     {
         // Validate input
         $validator = Validator::make($request->all(), [
@@ -23,8 +28,8 @@ class VendorController extends Controller
             'website' => 'nullable|url|max:255',
             'telegram' => 'nullable|string|max:255',
             'whatsapp' => 'nullable|string|max:255',
-            'tin_number' => 'required|string|unique:vendors,tin_number|max:20',
-            'license' => 'required|file|mimes:jpg,png,pdf|max:2048',
+            'tin_number' => 'required|string|unique:vendors,tin_number|size:10',
+            'license' => 'required|file|mimes:jpg,png|max:2048',
             'description' => 'nullable|string|max:1000',
         ]);
 
@@ -36,6 +41,17 @@ class VendorController extends Controller
         }
 
         $fields = $validator->validated();
+
+        $user_id = auth()->user()->id;
+        $checkIfExists = Vendor::where('user_id', $user_id)->first();
+
+        if ($checkIfExists) {
+            return response()->json([
+                'message' => 'User already manages a vendor',
+            ], 422);
+        }
+
+        $fields['user_id'] = $user_id;
 
         // Validate the license
         $licenseValidation = $this->validateLicense($request->file('license'), $fields['tin_number']);
@@ -53,22 +69,20 @@ class VendorController extends Controller
             [$fields['logo'], $fields['logo_public_id']] = $this->uploadToCloudinary($request->file('logo'), 'vendor_logos');
         }
 
-        $fields['user_id'] = auth()->user()->id;
-
         // Save vendor data
-        Vendor::create($fields);
+        $vendor = Vendor::create($fields);
 
         return response()->json([
             'message' => 'Vendor registered successfully',
-            'user' => auth()->user(),
+            'vendor' => $vendor,
         ], 201);
     }
 
-    private function validateLicense($license, $tinInput)
+    private function validateLicense(UploadedFile $license, string $tinInput): array
     {
         [$tinScanned, $qrUrl] = VendorHelper::extractQrCode($license);
 
-        if (strlen($tinScanned) < 10) {
+        if (strlen($tinScanned) != 10) {
             return [
                 'isValid' => false,
                 'error' => 'The TIN number extracted from the license is invalid (less than 10 digits).',
@@ -92,7 +106,7 @@ class VendorController extends Controller
         return ['isValid' => true, 'error' => null];
     }
 
-    private function uploadToCloudinary($file, $folder)
+    private function uploadToCloudinary(UploadedFile $file, string $folder): array
     {
         $upload = $file->storeOnCloudinary($folder);
 

@@ -4,13 +4,14 @@ namespace App\Services\Vendor;
 
 use Andegna\DateTimeFactory;
 use DateTime;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Zxing\QrReader;
 
 class VendorHelper
 {
-    public static function licenseExpired($renewalDate)
+    public static function licenseExpired(string $renewalDate): bool
     {
         [$day, $month, $year] = explode('/', $renewalDate);
         $ethiopianDate = DateTimeFactory::of((int) $year, (int) $month, (int) $day);
@@ -20,14 +21,14 @@ class VendorHelper
         return $renewalDateGregorian > $currentDate;
     }
 
-    public static function scanQrCode($imagePath)
+    public static function scanQrCode(UploadedFile $imagePath): mixed
     {
         $qrcode = new QrReader($imagePath);
 
         return $qrcode->text();
     }
 
-    public static function extractQrCode($imagePath)
+    public static function extractQrCode(UploadedFile $imagePath): array
     {
         $qrCodeData = self::scanQrCode($imagePath);
         $tin = null;
@@ -41,7 +42,7 @@ class VendorHelper
         return [$tin, $qrCodeData];
     }
 
-    public static function validateWithAPI($url, $tin)
+    public static function validateWithAPI($url, $tin): bool
     {
         try {
             $response = Http::withHeaders([
