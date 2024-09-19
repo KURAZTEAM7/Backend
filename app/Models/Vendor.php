@@ -29,7 +29,8 @@ class Vendor extends Model
         'description',
     ];  // TODO: check if logo_public_id needs to be here
 
-    public function user(): BelongsTo {
+    public function user(): BelongsTo
+    {
         return $this->belongsTo(User::class);
     }
 }

@@ -26,23 +26,23 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: ydqfltwzqjukwzk
+                  example: jixdopqr
                 middle_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: axixhhlixmnsxtlhfwkos
+                  example: fgiwmmbovnngjpyvxhtu
                 last_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: pewkupmiagcertotywuhoo
+                  example: xgvuropj
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: abraham.lehner@example.com
+                  example: adah.buckridge@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
-                  example: "g1!'@.{doiR_WLV?*.8m"
+                  example: (=4W9^%
                 picture:
                   type: string
                   format: binary
@@ -73,11 +73,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: uchamplin@example.org
+                  example: mgoyette@example.org
                 password:
                   type: string
                   description: ''
-                  example: 'o5x[8jFI[e1\.H'
+                  example: jh;VMsXQsX;qCuEvo;kG
               required:
                 - email
                 - password
@@ -110,15 +110,15 @@ paths:
                 store_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kcohboetqdcrexvgylvbnmoe
+                  example: ewtrtaqqccizbmf
                 phone_number:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: sk
+                  example: uprc
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: tking@example.org
+                  example: alysa.kuhlman@example.com
                 logo:
                   type: string
                   format: binary
@@ -126,31 +126,31 @@ paths:
                 zone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mywjpbuugwploxxkp
+                  example: yrejxrboynbdaedgvjkkul
                 region:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: yfec
+                  example: zxnvjuyiszkolufhyvpz
                 google_map_location:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: njukzwrqwxsko
+                  example: mxstuvkrudt
                 website:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: pcrywnqrrnlrvvlmiychstqn
+                  example: dvctrwvyyqlyspqsubz
                 telegram:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: hbyye
+                  example: zqyi
                 whatsapp:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: exhobaaytsqwttfogpr
+                  example: s
                 tin_number:
                   type: string
-                  description: 'Must not be greater than 20 characters.'
-                  example: ctc
+                  description: 'Must be 10 characters.'
+                  example: jcqcsadfyu
                 license:
                   type: string
                   format: binary
@@ -158,7 +158,7 @@ paths:
                 description:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: 'Adipisci quam eos accusantium eligendi.'
+                  example: 'Minima sit minima velit veniam atque quaerat qui doloribus.'
               required:
                 - store_name
                 - phone_number
@@ -167,7 +167,6 @@ paths:
                 - region
                 - tin_number
                 - license
-      security: []
 tags:
   -
     name: Endpoints

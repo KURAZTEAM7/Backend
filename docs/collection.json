@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "94f19e70-1029-4886-8440-e1a6a9fabf28",
+        "_postman_id": "4d7c7b53-c51d-4afd-b3cf-9af109fa68b0",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -44,31 +44,31 @@
                             "formdata": [
                                 {
                                     "key": "first_name",
-                                    "value": "ydqfltwzqjukwzk",
+                                    "value": "jixdopqr",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "middle_name",
-                                    "value": "axixhhlixmnsxtlhfwkos",
+                                    "value": "fgiwmmbovnngjpyvxhtu",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "last_name",
-                                    "value": "pewkupmiagcertotywuhoo",
+                                    "value": "xgvuropj",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "abraham.lehner@example.com",
+                                    "value": "adah.buckridge@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "g1!'@.{doiR_WLV?*.8m",
+                                    "value": "(=4W9^%",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 64 characters."
                                 },
@@ -108,7 +108,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"uchamplin@example.org\",\"password\":\"o5x[8jFI[e1\\\\.H\"}"
+                            "raw": "{\"email\":\"mgoyette@example.org\",\"password\":\"jh;VMsXQsX;qCuEvo;kG\"}"
                         },
                         "description": "",
                         "auth": {
@@ -167,67 +167,67 @@
                             "formdata": [
                                 {
                                     "key": "store_name",
-                                    "value": "kcohboetqdcrexvgylvbnmoe",
+                                    "value": "ewtrtaqqccizbmf",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "phone_number",
-                                    "value": "sk",
+                                    "value": "uprc",
                                     "type": "text",
                                     "description": "Must not be greater than 15 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "tking@example.org",
+                                    "value": "alysa.kuhlman@example.com",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "zone",
-                                    "value": "mywjpbuugwploxxkp",
+                                    "value": "yrejxrboynbdaedgvjkkul",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "region",
-                                    "value": "yfec",
+                                    "value": "zxnvjuyiszkolufhyvpz",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "google_map_location",
-                                    "value": "njukzwrqwxsko",
+                                    "value": "mxstuvkrudt",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "website",
-                                    "value": "pcrywnqrrnlrvvlmiychstqn",
+                                    "value": "dvctrwvyyqlyspqsubz",
                                     "type": "text",
                                     "description": "Must be a valid URL. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "telegram",
-                                    "value": "hbyye",
+                                    "value": "zqyi",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "whatsapp",
-                                    "value": "exhobaaytsqwttfogpr",
+                                    "value": "s",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "tin_number",
-                                    "value": "ctc",
+                                    "value": "jcqcsadfyu",
                                     "type": "text",
-                                    "description": "Must not be greater than 20 characters."
+                                    "description": "Must be 10 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Adipisci quam eos accusantium eligendi.",
+                                    "value": "Minima sit minima velit veniam atque quaerat qui doloribus.",
                                     "type": "text",
                                     "description": "Must not be greater than 1000 characters."
                                 },
@@ -243,10 +243,7 @@
                                 }
                             ]
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 }
