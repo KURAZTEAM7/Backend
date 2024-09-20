@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "5305160d-3a94-4566-9b9e-fb0cd9ac8f56",
+        "_postman_id": "f02ccd7a-b006-414e-ad86-6304d073e8ee",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -44,31 +44,31 @@
                             "formdata": [
                                 {
                                     "key": "first_name",
-                                    "value": "uxxiuudpdfexiftitma",
+                                    "value": "mmfgegkgq",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "middle_name",
-                                    "value": "pfmgdijazkovdpuyvvmz",
+                                    "value": "dqyvspcqqjcvbhu",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "last_name",
-                                    "value": "bwydkyxbfx",
+                                    "value": "rzsncxajmlqsfrxpnwkzoe",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "emerald11@example.org",
+                                    "value": "kdietrich@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "XlbfiaId9jBa$",
+                                    "value": "^\/f5*xk+}_Au",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 64 characters."
                                 },
@@ -108,7 +108,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"kay87@example.com\",\"password\":\"!5[zvs03a-&`~V`@I<(\"}"
+                            "raw": "{\"email\":\"marquise.wuckert@example.net\",\"password\":\"98'#X)'\"}"
                         },
                         "description": "",
                         "auth": {
@@ -167,67 +167,67 @@
                             "formdata": [
                                 {
                                     "key": "store_name",
-                                    "value": "oiqlgc",
+                                    "value": "scsldnli",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "phone_number",
-                                    "value": "lnpeylpcp",
+                                    "value": "vvdzfaorfiifmj",
                                     "type": "text",
                                     "description": "Must not be greater than 15 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "lee82@example.net",
+                                    "value": "schuster.lea@example.com",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "zone",
-                                    "value": "ogdmptzsy",
+                                    "value": "qwsiaozyanx",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "region",
-                                    "value": "eigqwrdqtost",
+                                    "value": "ltqn",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "google_map_location",
-                                    "value": "uywixsduzdgwwxvmnzj",
+                                    "value": "mhjjfnwhej",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "website",
-                                    "value": "ucdfgbxrwrlbwfln",
+                                    "value": "uexiolqd",
                                     "type": "text",
                                     "description": "Must be a valid URL. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "telegram",
-                                    "value": "nkwmpas",
+                                    "value": "otlgqyyxsilhxwqqqi",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "whatsapp",
-                                    "value": "sbplwckd",
+                                    "value": "rzbjoiakzkj",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "tin_number",
-                                    "value": "bqojnrgrfw",
+                                    "value": "ckpuhdjhtk",
                                     "type": "text",
                                     "description": "Must be 10 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Consequatur cupiditate cupiditate magni fugiat possimus sapiente officiis.",
+                                    "value": "Qui asperiores reprehenderit iste optio et beatae voluptas.",
                                     "type": "text",
                                     "description": "Must not be greater than 1000 characters."
                                 },
@@ -269,7 +269,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":53,\"per_page\":45}"
+                            "raw": "{\"page\":67,\"per_page\":41}"
                         },
                         "description": "",
                         "auth": {
@@ -293,7 +293,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"current_page\":53,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"links\":[{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=52\",\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"label\":\"1\",\"active\":false},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list\",\"per_page\":45,\"prev_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=52\",\"to\":null,\"total\":0}",
+                            "body": "{\"current_page\":67,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"links\":[{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=66\",\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"label\":\"1\",\"active\":false},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list\",\"per_page\":41,\"prev_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=66\",\"to\":null,\"total\":0}",
                             "name": ""
                         }
                     ]
@@ -310,7 +310,7 @@
                                 {
                                     "id": "name",
                                     "key": "name",
-                                    "value": "laborum",
+                                    "value": "explicabo",
                                     "description": ""
                                 }
                             ]
@@ -366,7 +366,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "14",
+                                    "value": "4",
                                     "description": "The ID of the vendor."
                                 }
                             ]
@@ -422,7 +422,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "8",
+                                    "value": "11",
                                     "description": "The ID of the vendor."
                                 }
                             ]
@@ -503,7 +503,7 @@
                                 {
                                     "id": "category_slug",
                                     "key": "category_slug",
-                                    "value": "sed",
+                                    "value": "impedit",
                                     "description": "The slug of the category."
                                 }
                             ]
@@ -546,6 +546,420 @@
                             "name": ""
                         }
                     ]
+                },
+                {
+                    "name": "GET api\/products",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/products",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "title",
+                                    "value": "dxjcgmtimxunvbaqteswskmh",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "Modi consequatur ipsum hic et.",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "price",
+                                    "value": 2642929.89135,
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "flexible_pricing",
+                                    "value": false,
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "brand",
+                                    "value": "laboriosam",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "model",
+                                    "value": "voluptates",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "barcode_upc",
+                                    "value": "eius",
+                                    "type": "text",
+                                    "description": "image validation."
+                                },
+                                {
+                                    "key": "barcode_eac",
+                                    "value": "maiores",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "product_availability",
+                                    "value": true,
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "company_id",
+                                    "value": "quas",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "category_id",
+                                    "value": "sed",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "images[]",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/products\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "20",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "title",
+                                    "value": "dbkpqdeulfl",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "Autem id incidunt provident.",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "price",
+                                    "value": 27318448.11863,
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "flexible_pricing",
+                                    "value": false,
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "brand",
+                                    "value": "labore",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "model",
+                                    "value": "dicta",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "barcode_upc",
+                                    "value": "autem",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "barcode_eac",
+                                    "value": "sit",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "product_availability",
+                                    "value": false,
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "company_id",
+                                    "value": "distinctio",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "category_id",
+                                    "value": "qui",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "images[]",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "_method",
+                                    "value": "PUT",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/products\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "3",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/products\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "11",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "title",
+                                    "value": "pbbuqrjfutv",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "Cupiditate doloribus velit suscipit nihil unde.",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "price",
+                                    "value": 65001.873113,
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "flexible_pricing",
+                                    "value": false,
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "brand",
+                                    "value": "eaque",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "model",
+                                    "value": "et",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "barcode_upc",
+                                    "value": "minima",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "barcode_eac",
+                                    "value": "ipsum",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "product_availability",
+                                    "value": true,
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "company_id",
+                                    "value": "quia",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "category_id",
+                                    "value": "voluptas",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "images[]",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
                 }
             ]
         }
@@ -559,3 +973,4 @@
             }
         ]
     }
+}
