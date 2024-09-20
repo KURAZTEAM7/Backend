@@ -12,4 +12,11 @@ class CategoryController extends Controller
     {
         return response()->json(Category::all());
     }
+
+    public function show(Category $category) {
+        return response()->json([
+            'category' => $category,
+            'products' => [],
+        ]);
+    }
 }
