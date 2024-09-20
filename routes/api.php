@@ -12,6 +12,7 @@ Route::post('/auth/logout', [AuthController::class, 'logout'])
 Route::post('/vendor/register', [VendorController::class, 'store'])
     ->middleware('auth:sanctum');
 Route::get('/vendor/list', [VendorController::class, 'index']);
+Route::get('/vendor/search/{name}', [VendorController::class, 'search']);
 Route::get('/vendor/{id}', [VendorController::class, 'show']);
 Route::delete('/vendor/{id}', [VendorController::class, 'destroy'])
     ->middleware('auth:sanctum');

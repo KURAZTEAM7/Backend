@@ -111,6 +111,18 @@ class VendorController extends Controller
         return response()->json($vendor);
     }
 
+    public function search(string $store_name): JsonResponse {
+        $vendors = Vendor::where('store_name', 'like', '%' . $store_name . '%')->get();
+
+        if (count($vendors) === 0) {
+            return response()->json([
+                'message' => 'No match found',
+            ], 422);
+        }
+
+        return response()->json($vendors);
+    }
+
     public function destroy(string $id): JsonResponse
     {
         $vendor = Vendor::find($id);
