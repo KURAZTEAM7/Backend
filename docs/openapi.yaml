@@ -26,23 +26,23 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: yzihagmmugg
+                  example: zummeyklmxw
                 middle_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: rlrzsmbsja
+                  example: bsrwqtbycqkm
                 last_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: lryjxgzbvyhntpiwsqajxm
+                  example: d
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: kaley14@example.org
+                  example: sdavis@example.org
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
-                  example: 'msZ?R>7['
+                  example: 'Dt}U>e[K[SbCiXY'
                 picture:
                   type: string
                   format: binary
@@ -73,11 +73,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: obie.marquardt@example.org
+                  example: gust70@example.net
                 password:
                   type: string
                   description: ''
-                  example: bNamL1Und
+                  example: '/>jea*3vLJK['
               required:
                 - email
                 - password
@@ -91,6 +91,273 @@ paths:
       responses: {  }
       tags:
         - Endpoints
+  /api/vendor/register:
+    post:
+      summary: ''
+      operationId: postApiVendorRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                store_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: apbvyljkj
+                phone_number:
+                  type: string
+                  description: 'Must not be greater than 15 characters.'
+                  example: powzduyrlvgg
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: blindgren@example.net
+                logo:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                zone:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: pugpthl
+                region:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: rdpahcmbys
+                google_map_location:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vrvfitkoncwciuj
+                website:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: ro
+                telegram:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: jwwroylgnmhyqmlecuvom
+                whatsapp:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: gyrjueahmamjseogcmjgvpd
+                tin_number:
+                  type: string
+                  description: 'Must be 10 characters.'
+                  example: bnkyiuzyii
+                license:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+                description:
+                  type: string
+                  description: 'Must not be greater than 1000 characters.'
+                  example: 'Numquam earum officiis nostrum occaecati id est.'
+              required:
+                - store_name
+                - phone_number
+                - email
+                - zone
+                - region
+                - tin_number
+                - license
+  /api/vendor/list:
+    get:
+      summary: ''
+      operationId: getApiVendorList
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  current_page: 66
+                  data: []
+                  first_page_url: 'http://localhost/api/vendor/list?page=1'
+                  from: null
+                  last_page: 1
+                  last_page_url: 'http://localhost/api/vendor/list?page=1'
+                  links:
+                    -
+                      url: 'http://localhost/api/vendor/list?page=65'
+                      label: '&laquo; Previous'
+                      active: false
+                    -
+                      url: 'http://localhost/api/vendor/list?page=1'
+                      label: '1'
+                      active: false
+                    -
+                      url: null
+                      label: 'Next &raquo;'
+                      active: false
+                  next_page_url: null
+                  path: 'http://localhost/api/vendor/list'
+                  per_page: 81
+                  prev_page_url: 'http://localhost/api/vendor/list?page=65'
+                  to: null
+                  total: 0
+                properties:
+                  current_page:
+                    type: integer
+                    example: 66
+                  data:
+                    type: array
+                    example: []
+                  first_page_url:
+                    type: string
+                    example: 'http://localhost/api/vendor/list?page=1'
+                  from:
+                    type: string
+                    example: null
+                  last_page:
+                    type: integer
+                    example: 1
+                  last_page_url:
+                    type: string
+                    example: 'http://localhost/api/vendor/list?page=1'
+                  links:
+                    type: array
+                    example:
+                      -
+                        url: 'http://localhost/api/vendor/list?page=65'
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/vendor/list?page=1'
+                        label: '1'
+                        active: false
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                          example: 'http://localhost/api/vendor/list?page=65'
+                        label:
+                          type: string
+                          example: '&laquo; Previous'
+                        active:
+                          type: boolean
+                          example: false
+                  next_page_url:
+                    type: string
+                    example: null
+                  path:
+                    type: string
+                    example: 'http://localhost/api/vendor/list'
+                  per_page:
+                    type: integer
+                    example: 81
+                  prev_page_url:
+                    type: string
+                    example: 'http://localhost/api/vendor/list?page=65'
+                  to:
+                    type: string
+                    example: null
+                  total:
+                    type: integer
+                    example: 0
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'Must be at least 0.'
+                  example: 66
+                per_page:
+                  type: integer
+                  description: 'Must be at least 0.'
+                  example: 81
+      security: []
+  '/api/vendor/search/{name}':
+    get:
+      summary: ''
+      operationId: getApiVendorSearchName
+      description: ''
+      parameters: []
+      responses:
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'No match found'
+                properties:
+                  message:
+                    type: string
+                    example: 'No match found'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: name
+        description: ''
+        example: adipisci
+        required: true
+        schema:
+          type: string
+  '/api/vendor/{id}':
+    get:
+      summary: ''
+      operationId: getApiVendorId
+      description: ''
+      parameters: []
+      responses:
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Vendor cannot be found'
+                properties:
+                  message:
+                    type: string
+                    example: 'Vendor cannot be found'
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiVendorId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the vendor.'
+        example: 8
+        required: true
+        schema:
+          type: integer
 tags:
   -
     name: Endpoints

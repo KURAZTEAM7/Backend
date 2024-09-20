@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "dedf5f80-b195-41cc-bd71-34585d8e3b84",
+        "_postman_id": "7f5235d2-4158-4be3-a01e-633328aa4031",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -44,31 +44,31 @@
                             "formdata": [
                                 {
                                     "key": "first_name",
-                                    "value": "yzihagmmugg",
+                                    "value": "zummeyklmxw",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "middle_name",
-                                    "value": "rlrzsmbsja",
+                                    "value": "bsrwqtbycqkm",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "last_name",
-                                    "value": "lryjxgzbvyhntpiwsqajxm",
+                                    "value": "d",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "kaley14@example.org",
+                                    "value": "sdavis@example.org",
                                     "type": "text",
                                     "description": "Must be a valid email address. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "msZ?R>7[",
+                                    "value": "Dt}U>e[K[SbCiXY",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 64 characters."
                                 },
@@ -108,7 +108,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"obie.marquardt@example.org\",\"password\":\"bNamL1Und\"}"
+                            "raw": "{\"email\":\"gust70@example.net\",\"password\":\"\\\/>jea*3vLJK[\"}"
                         },
                         "description": "",
                         "auth": {
@@ -127,6 +127,307 @@
                             "raw": "{{baseUrl}}\/api\/auth\/logout"
                         },
                         "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/vendor\/register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/vendor\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/vendor\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "store_name",
+                                    "value": "apbvyljkj",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "powzduyrlvgg",
+                                    "type": "text",
+                                    "description": "Must not be greater than 15 characters."
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "blindgren@example.net",
+                                    "type": "text",
+                                    "description": "Must be a valid email address."
+                                },
+                                {
+                                    "key": "zone",
+                                    "value": "pugpthl",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "region",
+                                    "value": "rdpahcmbys",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "google_map_location",
+                                    "value": "vrvfitkoncwciuj",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "website",
+                                    "value": "ro",
+                                    "type": "text",
+                                    "description": "Must be a valid URL. Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "telegram",
+                                    "value": "jwwroylgnmhyqmlecuvom",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "whatsapp",
+                                    "value": "gyrjueahmamjseogcmjgvpd",
+                                    "type": "text",
+                                    "description": "Must not be greater than 255 characters."
+                                },
+                                {
+                                    "key": "tin_number",
+                                    "value": "bnkyiuzyii",
+                                    "type": "text",
+                                    "description": "Must be 10 characters."
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "Numquam earum officiis nostrum occaecati id est.",
+                                    "type": "text",
+                                    "description": "Must not be greater than 1000 characters."
+                                },
+                                {
+                                    "key": "logo",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "license",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/vendor\/list",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/vendor\/list",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/vendor\/list"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"page\":66,\"per_page\":81}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"current_page\":66,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"links\":[{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=65\",\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"label\":\"1\",\"active\":false},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list\",\"per_page\":81,\"prev_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=65\",\"to\":null,\"total\":0}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/vendor\/search\/{name}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/vendor\/search\/:name",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/vendor\/search\/:name",
+                            "variable": [
+                                {
+                                    "id": "name",
+                                    "key": "name",
+                                    "value": "adipisci",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 422,
+                            "body": "{\"message\":\"No match found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/vendor\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/vendor\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/vendor\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "8",
+                                    "description": "The ID of the vendor."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 422,
+                            "body": "{\"message\":\"Vendor cannot be found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "DELETE api\/vendor\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/vendor\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/vendor\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "18",
+                                    "description": "The ID of the vendor."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
                         "header": [
                             {
                                 "key": "Content-Type",

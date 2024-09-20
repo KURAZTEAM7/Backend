@@ -51,6 +51,12 @@ jobs:
       - name: Run pint
         run: vendor/bin/pint
 
+      - name: Create database file
+        run: touch database/database.sqlite
+
+      - name: Migrate database
+        run: php artisan migrate:fresh
+
       - name: Generate api docs
         run: php artisan scribe:generate
 

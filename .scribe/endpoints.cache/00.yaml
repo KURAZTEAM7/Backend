@@ -28,7 +28,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: yzihagmmugg
+        example: zummeyklmxw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -37,7 +37,7 @@ endpoints:
         name: middle_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: rlrzsmbsja
+        example: bsrwqtbycqkm
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -46,7 +46,7 @@ endpoints:
         name: last_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: lryjxgzbvyhntpiwsqajxm
+        example: d
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -55,7 +55,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: kaley14@example.org
+        example: sdavis@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -64,7 +64,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
         required: true
-        example: 'msZ?R>7['
+        example: 'Dt}U>e[K[SbCiXY'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -79,11 +79,11 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: yzihagmmugg
-      middle_name: rlrzsmbsja
-      last_name: lryjxgzbvyhntpiwsqajxm
-      email: kaley14@example.org
-      password: 'msZ?R>7['
+      first_name: zummeyklmxw
+      middle_name: bsrwqtbycqkm
+      last_name: d
+      email: sdavis@example.org
+      password: 'Dt}U>e[K[SbCiXY'
     fileParameters:
       picture: null
     responses: []
@@ -118,7 +118,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: obie.marquardt@example.org
+        example: gust70@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -127,14 +127,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: bNamL1Und
+        example: '/>jea*3vLJK['
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: obie.marquardt@example.org
-      password: bNamL1Und
+      email: gust70@example.net
+      password: '/>jea*3vLJK['
     fileParameters: []
     responses: []
     responseFields: []
@@ -172,7 +172,372 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Zb6ekaVDP16dfhvE8g543ca'
+      - 'Bearer dba53Dcv4Z86Vkgf6a1PehE'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/vendor/register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      store_name:
+        name: store_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: apbvyljkj
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      phone_number:
+        name: phone_number
+        description: 'Must not be greater than 15 characters.'
+        required: true
+        example: powzduyrlvgg
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: blindgren@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      logo:
+        name: logo
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      zone:
+        name: zone
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: pugpthl
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      region:
+        name: region
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: rdpahcmbys
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      google_map_location:
+        name: google_map_location
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: vrvfitkoncwciuj
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      website:
+        name: website
+        description: 'Must be a valid URL. Must not be greater than 255 characters.'
+        required: false
+        example: ro
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      telegram:
+        name: telegram
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: jwwroylgnmhyqmlecuvom
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      whatsapp:
+        name: whatsapp
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: gyrjueahmamjseogcmjgvpd
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      tin_number:
+        name: tin_number
+        description: 'Must be 10 characters.'
+        required: true
+        example: bnkyiuzyii
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      license:
+        name: license
+        description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: 'Must not be greater than 1000 characters.'
+        required: false
+        example: 'Numquam earum officiis nostrum occaecati id est.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      store_name: apbvyljkj
+      phone_number: powzduyrlvgg
+      email: blindgren@example.net
+      zone: pugpthl
+      region: rdpahcmbys
+      google_map_location: vrvfitkoncwciuj
+      website: ro
+      telegram: jwwroylgnmhyqmlecuvom
+      whatsapp: gyrjueahmamjseogcmjgvpd
+      tin_number: bnkyiuzyii
+      description: 'Numquam earum officiis nostrum occaecati id est.'
+    fileParameters:
+      logo: null
+      license: null
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer afVP36vaZE5d41b8Dk6egch'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/vendor/list
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      page:
+        name: page
+        description: 'Must be at least 0.'
+        required: false
+        example: 66
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      per_page:
+        name: per_page
+        description: 'Must be at least 0.'
+        required: false
+        example: 81
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      page: 66
+      per_page: 81
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"current_page":66,"data":[],"first_page_url":"http:\/\/localhost\/api\/vendor\/list?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/vendor\/list?page=1","links":[{"url":"http:\/\/localhost\/api\/vendor\/list?page=65","label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/vendor\/list?page=1","label":"1","active":false},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/vendor\/list","per_page":81,"prev_page_url":"http:\/\/localhost\/api\/vendor\/list?page=65","to":null,"total":0}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/vendor/search/{name}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: adipisci
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      name: adipisci
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 422
+        content: '{"message":"No match found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/vendor/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the vendor.'
+        required: true
+        example: 8
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 8
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 422
+        content: '{"message":"Vendor cannot be found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/vendor/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {ACCESS_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the vendor.'
+        required: true
+        example: 18
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 18
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1a6D4cbEV6fZeg3v8ahkdP5'
     controller: null
     method: null
     route: null
