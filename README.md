@@ -44,10 +44,10 @@ Create a `database.sqlite` file in the `database` folder
 touch database/database.sqlite
 ```
 
-Perfrom database migrations
+Perfrom database migrations and seeding
 
 ```
-php artisan migrate
+php artisan migrate:fresh --seed
 ```
 
 Add necessary symbolic links for storing files
@@ -62,7 +62,6 @@ API environment variable, then copy it to you local .env file as follows:
 
 ```
 CLOUDINARY_URL=cloudinary://xxxxxxxxxxxxxxxxxxx
-
 ```
 
 To use the dev server, run the following commands in a persistent terminal window
