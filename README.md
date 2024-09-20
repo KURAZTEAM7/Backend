@@ -38,6 +38,12 @@ Generate app encryption key
 php artisan key:generate
 ```
 
+Create a `database.sqlite` file in the `database` folder
+
+```
+touch database/database.sqlite
+```
+
 Perfrom database migrations
 
 ```
