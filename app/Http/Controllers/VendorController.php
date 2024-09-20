@@ -123,6 +123,9 @@ class VendorController extends Controller
         return response()->json($vendors);
     }
 
+    /**
+     * @authenticated
+     **/
     public function destroy(string $id): JsonResponse
     {
         $vendor = Vendor::find($id);
