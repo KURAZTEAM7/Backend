@@ -11,10 +11,11 @@ use Illuminate\Support\Facades\Validator;
 
 class VendorController extends Controller
 {
-    public function index(Request $request): JsonResponse {
+    public function index(Request $request): JsonResponse
+    {
         $validator = Validator::make($request->all(), [
             'page' => 'integer|min:0',
-            'per_page' => 'integer|min:0'
+            'per_page' => 'integer|min:0',
         ]);
 
         if ($validator->fails()) {
@@ -29,6 +30,7 @@ class VendorController extends Controller
 
         return response()->json(Vendor::paginate($fields['per_page']));
     }
+
     /**
      * @authenticated
      **/
@@ -96,10 +98,11 @@ class VendorController extends Controller
         ], 201);
     }
 
-    public function show(string $id): JsonResponse {
+    public function show(string $id): JsonResponse
+    {
         $vendor = Vendor::find($id);
 
-        if (!$vendor){
+        if (! $vendor) {
             return response()->json([
                 'message' => 'Vendor cannot be found',
             ], 422);
@@ -108,7 +111,8 @@ class VendorController extends Controller
         return response()->json($vendor);
     }
 
-    public function destroy(string $id): JsonResponse {
+    public function destroy(string $id): JsonResponse
+    {
         $vendor = Vendor::find($id);
         if ($vendor) {
             if (auth()->id() != $vendor->user_id) {
