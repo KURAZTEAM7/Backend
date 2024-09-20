@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\VendorController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,5 @@ Route::get('/vendor/search/{name}', [VendorController::class, 'search']);
 Route::get('/vendor/{id}', [VendorController::class, 'show']);
 Route::delete('/vendor/{id}', [VendorController::class, 'destroy'])
     ->middleware('auth:sanctum');
+
+Route::get('/category/list', [CategoryController::class, 'index']);
