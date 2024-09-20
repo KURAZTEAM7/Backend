@@ -20,7 +20,7 @@ Route::delete('/vendor/{id}', [VendorController::class, 'destroy'])
 
 Route::get('/category/list', [CategoryController::class, 'index']);
 Route::get('/category/products/{category}', [CategoryController::class, 'show'])
-    ->missing(function() {
+    ->missing(function () {
         return response()->json([
             'message' => 'Category does not exist',
         ]);

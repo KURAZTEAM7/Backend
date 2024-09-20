@@ -17,7 +17,8 @@ class Category extends Model
         'image_url',
     ];
 
-    public function getSlugOptions(): SlugOptions {
+    public function getSlugOptions(): SlugOptions
+    {
         return SlugOptions::create()
             ->generateSlugsFrom('name')
             ->saveSlugsTo('slug');
