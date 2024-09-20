@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    public function index(Request $request): JsonResponse {
+    public function index(Request $request): JsonResponse
+    {
         return response()->json(Category::all());
     }
 }
