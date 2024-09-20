@@ -14,19 +14,19 @@ class Product extends Model
     protected $primaryKey = 'product_id';
 
     protected $fillable = [
-        'title', 
-        'description', 
-        'price', 
-        'flexible_pricing', 
-        'brand', 
-        'model', 
-        'image_urls', 
-        'barcode_upc', 
-        'barcode_eac', 
-        'product_availability', 
-        'tags', 
-        'company_id', 
-        'category_id'
+        'title',
+        'description',
+        'price',
+        'flexible_pricing',
+        'brand',
+        'model',
+        'image_urls',
+        'barcode_upc',
+        'barcode_eac',
+        'product_availability',
+        'tags',
+        'company_id',
+        'category_id',
     ];
 
     protected $casts = [
@@ -35,11 +35,13 @@ class Product extends Model
     ];
 
     // Relationships
-    public function company() {
+    public function company()
+    {
         return $this->belongsTo(Company::class, 'company_id');
     }
 
-    public function category() {
+    public function category()
+    {
         return $this->belongsTo(Category::class, 'category_id');
     }
 }
