@@ -61,7 +61,7 @@ class ProductController extends Controller
         $fields = $validator->validated();
 
         $vendor = auth()->user()->vendor;
-        if (!$vendor) {
+        if (! $vendor) {
             return response()->json([
                 'message' => 'Unauthorized',
             ], 422);
@@ -92,7 +92,7 @@ class ProductController extends Controller
     {
         $vendor = auth()->user()->vendor;
 
-        if (!$vendor) {
+        if (! $vendor) {
             return response()->json([
                 'message' => 'Unauthorized',
             ], 422);
@@ -100,7 +100,7 @@ class ProductController extends Controller
 
         $product = Product::find($id);
 
-        if (!$product) {
+        if (! $product) {
             return response()->json([
                 'message' => 'Product does not exist',
             ], 422);
