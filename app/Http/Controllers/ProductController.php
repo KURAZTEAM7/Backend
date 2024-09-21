@@ -39,7 +39,7 @@ class ProductController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
             'price' => 'required|numeric',
-            'flexible_pricing' => 'required|boolean',
+            'flexible_pricing' => 'required|boolean|nullable',
             'brand' => 'nullable|string',
             'model' => 'nullable|string',
             'images' => 'nullable|array',
