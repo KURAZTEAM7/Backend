@@ -22,7 +22,7 @@ return new class extends Migration
             $table->json('image_urls')->nullable(); // Storing images as JSON array
             $table->string('barcode_upc')->nullable();
             $table->string('barcode_eac')->nullable();
-            $table->boolean('product_availability')->default(true);
+            $table->integer('remaining_stock');
             $table->json('tags')->nullable();
             $table->unsignedBigInteger('vendor_id');
             $table->unsignedBigInteger('category_id');

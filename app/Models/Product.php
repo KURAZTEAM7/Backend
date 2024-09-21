@@ -24,7 +24,7 @@ class Product extends Model
         'image_urls',
         'barcode_upc',
         'barcode_eac',
-        'product_availability',
+        'remaining_stock',
         'tags',
         'vendor_id',
         'category_id',
