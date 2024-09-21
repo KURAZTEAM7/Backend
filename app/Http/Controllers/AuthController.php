@@ -101,7 +101,7 @@ class AuthController extends Controller
 
         auth()->user()->tokens()->delete();
 
-        return response(['message' => 'Logout succesful'], 401);
+        return response(['message' => 'Logout succesful'], 204);
     }
 
     // TODO: implement allowing users to logout from other devices

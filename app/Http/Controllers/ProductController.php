@@ -27,7 +27,7 @@ class ProductController extends Controller
         $fields = $validator->validated();
         $fields['per_page'] = $fields['per_page'] ?? 10;
 
-        return response()->json(Product::paginate($fields['per_page']));
+        return response()->json(Product::paginate($fields['per_page']), 200);
     }
 
     /**
@@ -64,7 +64,7 @@ class ProductController extends Controller
         if (! $vendor) {
             return response()->json([
                 'message' => 'Unauthorized',
-            ], 422);
+            ], 403);
         }
 
         $fields['vendor_id'] = $vendor->id;
@@ -96,25 +96,25 @@ class ProductController extends Controller
         if (! $vendor) {
             return response()->json([
                 'message' => 'Unauthorized',
-            ], 422);
+            ], 403);
         }
 
         $product = Product::find($id);
 
         if (! $product) {
             return response()->json([
-                'message' => 'Product does not exist',
-            ], 422);
+                'message' => 'Nothing to delete',
+            ], 204);
         }
 
         if ($product->vendor != $vendor) {
             return response()->json([
-                'message' => 'This vendor cannot delete this product',
-            ], 422);
+                'message' => 'Unauthorized',
+            ], 403);
         }
 
         $product->delete();
 
-        return response()->json(['message' => 'Product deleted successfully'], 200);
+        return response()->json(['message' => 'Product deleted successfully'], 204);
     }
 }

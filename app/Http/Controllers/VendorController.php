@@ -28,7 +28,7 @@ class VendorController extends Controller
         $fields = $validator->validated();
         $fields['per_page'] = $fields['per_page'] ?? 10;
 
-        return response()->json(Vendor::paginate($fields['per_page']));
+        return response()->json(Vendor::paginate($fields['per_page']), 200);
     }
 
     /**
@@ -68,7 +68,7 @@ class VendorController extends Controller
         if ($checkIfExists) {
             return response()->json([
                 'message' => 'User already manages a vendor',
-            ], 422);
+            ], 406);
         }
 
         $fields['user_id'] = $user_id;
@@ -108,7 +108,7 @@ class VendorController extends Controller
             ], 422);
         }
 
-        return response()->json($vendor);
+        return response()->json($vendor, 200);
     }
 
     public function search(string $store_name): JsonResponse
@@ -121,7 +121,7 @@ class VendorController extends Controller
             ], 422);
         }
 
-        return response()->json($vendors);
+        return response()->json($vendors, 200);
     }
 
     /**
@@ -134,19 +134,19 @@ class VendorController extends Controller
             if (auth()->id() != $vendor->user_id) {
                 return response()->json([
                     'message' => 'Unauthorized',
-                ], 422);
+                ], 403);
             }
 
             if ($vendor->delete() == 1) {
                 return response()->json([
                     'message' => 'Vendor deleted successfully',
-                ], 201);
+                ], 204);
             }
         }
 
         return response()->json([
-            'message' => 'Vendor not deleted',
-        ], 422);
+            'message' => 'Nothing to delete',
+        ], 204);
     }
 
     private function validateLicense(UploadedFile $license, string $tinInput): array
