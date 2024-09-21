@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\VendorController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,9 +25,3 @@ Route::get('/category/products/{category}', [CategoryController::class, 'show'])
             'message' => 'Category does not exist',
         ]);
     });
-
-Route::get('/product/list', [ProductController::class, 'index']);
-Route::post('/product/add', [ProductController::class, 'store'])
-    ->middleware('auth:sanctum');
-Route::delete('/product/{id}', [ProductController::class, 'destroy'])
-    ->middleware('auth:sanctum');

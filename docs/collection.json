@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "1f55835b-6502-40d7-b9bb-86cd3bdb5ffe",
+        "_postman_id": "5305160d-3a94-4566-9b9e-fb0cd9ac8f56",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -44,31 +44,31 @@
                             "formdata": [
                                 {
                                     "key": "first_name",
-                                    "value": "elnvurkuwpay",
+                                    "value": "uxxiuudpdfexiftitma",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "middle_name",
-                                    "value": "ksgogvyzosv",
+                                    "value": "pfmgdijazkovdpuyvvmz",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "last_name",
-                                    "value": "qnffnzuhcvnnli",
+                                    "value": "bwydkyxbfx",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "aida.reichel@example.net",
+                                    "value": "emerald11@example.org",
                                     "type": "text",
                                     "description": "Must be a valid email address. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "v\/ZS*!aJ5,wtkP|Ldc",
+                                    "value": "XlbfiaId9jBa$",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 64 characters."
                                 },
@@ -108,7 +108,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"mhamill@example.org\",\"password\":\"}\\\\or5+d\"}"
+                            "raw": "{\"email\":\"kay87@example.com\",\"password\":\"!5[zvs03a-&`~V`@I<(\"}"
                         },
                         "description": "",
                         "auth": {
@@ -167,67 +167,67 @@
                             "formdata": [
                                 {
                                     "key": "store_name",
-                                    "value": "jiwblru",
+                                    "value": "oiqlgc",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "phone_number",
-                                    "value": "aeis",
+                                    "value": "lnpeylpcp",
                                     "type": "text",
                                     "description": "Must not be greater than 15 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "isawayn@example.com",
+                                    "value": "lee82@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "zone",
-                                    "value": "gbpcuiplopmqdma",
+                                    "value": "ogdmptzsy",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "region",
-                                    "value": "fekqfxodlttyc",
+                                    "value": "eigqwrdqtost",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "google_map_location",
-                                    "value": "mqeudacweoklsccj",
+                                    "value": "uywixsduzdgwwxvmnzj",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "website",
-                                    "value": "gyogpx",
+                                    "value": "ucdfgbxrwrlbwfln",
                                     "type": "text",
                                     "description": "Must be a valid URL. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "telegram",
-                                    "value": "tewdlqzaefjuzejb",
+                                    "value": "nkwmpas",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "whatsapp",
-                                    "value": "wodrtvj",
+                                    "value": "sbplwckd",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "tin_number",
-                                    "value": "izqtoxfjcv",
+                                    "value": "bqojnrgrfw",
                                     "type": "text",
                                     "description": "Must be 10 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Ut iusto suscipit odit dolorem impedit.",
+                                    "value": "Consequatur cupiditate cupiditate magni fugiat possimus sapiente officiis.",
                                     "type": "text",
                                     "description": "Must not be greater than 1000 characters."
                                 },
@@ -269,7 +269,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":72,\"per_page\":8}"
+                            "raw": "{\"page\":53,\"per_page\":45}"
                         },
                         "description": "",
                         "auth": {
@@ -293,7 +293,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"current_page\":72,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"links\":[{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=71\",\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"label\":\"1\",\"active\":false},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list\",\"per_page\":8,\"prev_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=71\",\"to\":null,\"total\":0}",
+                            "body": "{\"current_page\":53,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"links\":[{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=52\",\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=1\",\"label\":\"1\",\"active\":false},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list\",\"per_page\":45,\"prev_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/vendor\\\/list?page=52\",\"to\":null,\"total\":0}",
                             "name": ""
                         }
                     ]
@@ -310,7 +310,7 @@
                                 {
                                     "id": "name",
                                     "key": "name",
-                                    "value": "sequi",
+                                    "value": "laborum",
                                     "description": ""
                                 }
                             ]
@@ -366,7 +366,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "2",
+                                    "value": "14",
                                     "description": "The ID of the vendor."
                                 }
                             ]
@@ -422,7 +422,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "10",
+                                    "value": "8",
                                     "description": "The ID of the vendor."
                                 }
                             ]
@@ -503,7 +503,7 @@
                                 {
                                     "id": "category_slug",
                                     "key": "category_slug",
-                                    "value": "vel",
+                                    "value": "sed",
                                     "description": "The slug of the category."
                                 }
                             ]
@@ -546,184 +546,6 @@
                             "name": ""
                         }
                     ]
-                },
-                {
-                    "name": "GET api\/product\/list",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/product\/list",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/product\/list"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"page\":72,\"per_page\":31}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"current_page\":72,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/product\\\/list?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/product\\\/list?page=1\",\"links\":[{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/product\\\/list?page=71\",\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/product\\\/list?page=1\",\"label\":\"1\",\"active\":false},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/product\\\/list\",\"per_page\":31,\"prev_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/product\\\/list?page=71\",\"to\":null,\"total\":0}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST api\/product\/add",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/product\/add",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/product\/add"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "multipart\/form-data"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "title",
-                                    "value": "yncsebaelep",
-                                    "type": "text",
-                                    "description": "Must not be greater than 255 characters."
-                                },
-                                {
-                                    "key": "description",
-                                    "value": "Deserunt sunt et et similique id.",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "price",
-                                    "value": 2.75,
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "flexible_pricing",
-                                    "value": false,
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "brand",
-                                    "value": "omnis",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "model",
-                                    "value": "illo",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "barcode_upc",
-                                    "value": "brkeuxgbszub",
-                                    "type": "text",
-                                    "description": "image validation. Must be 12 characters."
-                                },
-                                {
-                                    "key": "barcode_eac",
-                                    "value": "mzloaguweedsh",
-                                    "type": "text",
-                                    "description": "Must be 13 characters."
-                                },
-                                {
-                                    "key": "product_availability",
-                                    "value": true,
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "category_id",
-                                    "value": "eum",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "images[]",
-                                    "src": [],
-                                    "type": "file"
-                                }
-                            ]
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "DELETE api\/product\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/product\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/product\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "3",
-                                    "description": "The ID of the product."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
                 }
             ]
         }
