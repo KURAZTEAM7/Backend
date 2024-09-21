@@ -3,20 +3,39 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
     // Fetch all products
-    public function index()
+    public function index(Request $request): JsonResponse
     {
-        return response()->json(Product::all(), 200);
+        $validator = Validator::make($request->all(), [
+            'page' => 'integer|min:0',
+            'per_page' => 'integer|min:0',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'Validation failed',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        $fields = $validator->validated();
+        $fields['per_page'] = $fields['per_page'] ?? 10;
+
+        return response()->json(Product::paginate($fields['per_page']));
     }
 
-    // Create a new product
-    public function store(Request $request)
+    /**
+     * @authenticated
+     **/
+    public function store(Request $request): JsonResponse
     {
-        $validatedData = $request->validate([
+        $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
             'price' => 'required|numeric',
@@ -25,13 +44,30 @@ class ProductController extends Controller
             'model' => 'nullable|string',
             'images' => 'nullable|array',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // image validation
-            'barcode_upc' => 'nullable|string',
-            'barcode_eac' => 'nullable|string',
+            'barcode_upc' => 'nullable|string|size:12',
+            'barcode_eac' => 'nullable|string|size:13',
             'product_availability' => 'required|boolean',
             'tags' => 'nullable|array',
-            'company_id' => 'required|exists:companies,company_id',
-            'category_id' => 'required|exists:categories,category_id',
+            'category_id' => 'required|exists:categories,id',
         ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'Validation failed',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        $fields = $validator->validated();
+
+        $vendor = auth()->user()->vendor;
+        if (!$vendor) {
+            return response()->json([
+                'message' => 'Unauthorized',
+            ], 422);
+        }
+
+        $fields['vendor_id'] = $vendor->id;
 
         $imageUrls = [];
 
@@ -42,53 +78,40 @@ class ProductController extends Controller
             }
         }
 
-        $validatedData['image_urls'] = $imageUrls;
+        $fields['image_urls'] = $imageUrls;
 
-        $product = Product::create($validatedData);
+        $product = Product::create($fields);
 
         return response()->json($product, 201);
     }
 
-    // Update a product
-    public function update(Request $request, $id)
-    {
-        $product = Product::findOrFail($id);
-
-        $validatedData = $request->validate([
-            'title' => 'sometimes|required|string|max:255',
-            'description' => 'nullable|string',
-            'price' => 'sometimes|required|numeric',
-            'flexible_pricing' => 'sometimes|required|boolean',
-            'brand' => 'nullable|string',
-            'model' => 'nullable|string',
-            'images' => 'nullable|array',  // Accept an array of images
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'barcode_upc' => 'nullable|string',
-            'barcode_eac' => 'nullable|string',
-            'product_availability' => 'sometimes|required|boolean',
-            'tags' => 'nullable|array',
-            'company_id' => 'sometimes|required|exists:companies,company_id',
-            'category_id' => 'sometimes|required|exists:categories,category_id',
-        ]);
-
-        if ($request->hasFile('images')) {
-            $imageUrls = [];
-            foreach ($request->file('images') as $image) {
-                $uploadedFileUrl = cloudinary()->upload($image->getRealPath())->getSecurePath();
-                $imageUrls[] = $uploadedFileUrl;
-            }
-            $validatedData['image_urls'] = $imageUrls;
-        }
-
-        $product->update($validatedData);
-
-        return response()->json($product, 200);
-    }
-
-    // Delete a product
+    /**
+     * @authenticated
+     **/
     public function destroy($id)
     {
-        $product = Product::findOrFail($id);
+        $vendor = auth()->user()->vendor;
+
+        if (!$vendor) {
+            return response()->json([
+                'message' => 'Unauthorized',
+            ], 422);
+        }
+
+        $product = Product::find($id);
+
+        if (!$product) {
+            return response()->json([
+                'message' => 'Product does not exist',
+            ], 422);
+        }
+
+        if ($product->vendor != $vendor) {
+            return response()->json([
+                'message' => 'This vendor cannot delete this product',
+            ], 422);
+        }
+
         $product->delete();
 
         return response()->json(['message' => 'Product deleted successfully'], 200);

@@ -24,13 +24,13 @@ return new class extends Migration
             $table->string('barcode_eac')->nullable();
             $table->boolean('product_availability')->default(true);
             $table->json('tags')->nullable();
-            $table->unsignedBigInteger('company_id');
+            $table->unsignedBigInteger('vendor_id');
             $table->unsignedBigInteger('category_id');
             $table->timestamps();
 
             // Foreign key constraints
-            $table->foreign('company_id')->references('company_id')->on('companies');
-            $table->foreign('category_id')->references('category_id')->on('categories');
+            $table->foreign('vendor_id')->references('id')->on('vendors');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

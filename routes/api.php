@@ -26,6 +26,9 @@ Route::get('/category/products/{category}', [CategoryController::class, 'show'])
             'message' => 'Category does not exist',
         ]);
     });
-Route::apiResource('products', ProductController::class);
-Route::post('products', [ProductController::class, 'store'])->middleware('auth:api');
-Route::post('products/{id}', [ProductController::class, 'update'])->middleware('auth:api');
+
+Route::get('/product/list', [ProductController::class, 'index']);
+Route::post('/product/add', [ProductController::class, 'store'])
+    ->middleware('auth:sanctum');
+Route::delete('/product/{id}', [ProductController::class, 'destroy'])
+    ->middleware('auth:sanctum');
