@@ -73,8 +73,9 @@ class ProductController extends Controller
 
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
-                $uploadedFileUrl = cloudinary()->upload($image->getRealPath())->getSecurePath();
-                $imageUrls[] = $uploadedFileUrl;
+                $cloudinaryPicture = $image->storeOnCloudinary('product_image');
+                $url = $cloudinaryPicture->getSecurePath();
+                $imageUrls[] = $url;
             }
         }
 
