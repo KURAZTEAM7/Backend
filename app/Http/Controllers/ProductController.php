@@ -13,8 +13,8 @@ class ProductController extends Controller
     public function index(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
-            'page' => 'integer|min:0',
-            'per_page' => 'integer|min:0',
+            'page' => 'integer|min:1',
+            'per_page' => 'integer|min:1',
         ]);
 
         if ($validator->fails()) {
