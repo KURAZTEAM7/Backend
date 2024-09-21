@@ -46,7 +46,7 @@ class ProductController extends Controller
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // image validation
             'barcode_upc' => 'nullable|string|size:12',
             'barcode_eac' => 'nullable|string|size:13',
-            'product_availability' => 'required|boolean',
+            'remaining_stock' => 'required|integer|min:0',
             'tags' => 'nullable|array',
             'category_id' => 'required|exists:categories,id',
         ]);
