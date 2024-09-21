@@ -11,7 +11,7 @@ class CategoryController extends Controller
 {
     public function index(Request $request): JsonResponse
     {
-        return response()->json(Category::all());
+        return response()->json(Category::all(), 200);
     }
 
     public function show(Request $request, Category $category)
@@ -34,6 +34,6 @@ class CategoryController extends Controller
         return response()->json([
             'category' => $category,
             'products' => $category->products()->paginate($fields['per_page']),
-        ]);
+        ], 200);
     }
 }
