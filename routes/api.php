@@ -33,5 +33,6 @@ Route::get('/category/products/{category}', [CategoryController::class, 'show'])
 Route::get('/product/list', [ProductController::class, 'index']);
 Route::post('/product/add', [ProductController::class, 'store'])
     ->middleware('auth:sanctum');
+Route::get('/product/{id}', [ProductController::class, 'show']);
 Route::delete('/product/{id}', [ProductController::class, 'destroy'])
     ->middleware('auth:sanctum');
