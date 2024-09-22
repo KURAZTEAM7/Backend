@@ -10,24 +10,9 @@ use Illuminate\Support\Facades\Validator;
 class ProductController extends Controller
 {
     // Fetch all products
-    public function index(Request $request): JsonResponse
+    public function index(): JsonResponse
     {
-        $validator = Validator::make($request->all(), [
-            'page' => 'integer|min:1',
-            'per_page' => 'integer|min:1',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'Validation failed',
-                'errors' => $validator->errors(),
-            ], 422);
-        }
-
-        $fields = $validator->validated();
-        $fields['per_page'] = $fields['per_page'] ?? 10;
-
-        return response()->json(Product::paginate($fields['per_page']), 200);
+        return response()->json(Product::all(), 200);
     }
 
     /**

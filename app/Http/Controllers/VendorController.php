@@ -11,24 +11,9 @@ use Illuminate\Support\Facades\Validator;
 
 class VendorController extends Controller
 {
-    public function index(Request $request): JsonResponse
+    public function index(): JsonResponse
     {
-        $validator = Validator::make($request->all(), [
-            'page' => 'integer|min:0',
-            'per_page' => 'integer|min:0',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'Validation failed',
-                'errors' => $validator->errors(),
-            ], 422);
-        }
-
-        $fields = $validator->validated();
-        $fields['per_page'] = $fields['per_page'] ?? 10;
-
-        return response()->json(Vendor::paginate($fields['per_page']), 200);
+        return response()->json(Vendor::all(), 200);
     }
 
     /**
