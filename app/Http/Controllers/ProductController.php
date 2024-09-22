@@ -104,7 +104,7 @@ class ProductController extends Controller
         if (! $product) {
             return response()->json([
                 'message' => 'Nothing to delete',
-            ], 204);
+            ], 200);
         }
 
         if ($product->vendor != $vendor) {
@@ -115,6 +115,6 @@ class ProductController extends Controller
 
         $product->delete();
 
-        return response()->json(['message' => 'Product deleted successfully'], 204);
+        return response()->json(['message' => 'Product deleted successfully'], 200);
     }
 }
