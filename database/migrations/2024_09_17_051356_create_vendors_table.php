@@ -17,7 +17,7 @@ return new class extends Migration
 
             $table->string('store_name');  // Store name
             $table->string('phone_number');
-            $table->string('email')->unique();
+            $table->string('email')->unique()->nullable();
             $table->string('logo')->nullable();  // Store logo (optional)
             $table->string('logo_public_id')->nullable();  // Public ID for cloud storage (optional)
 
