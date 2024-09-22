@@ -18,6 +18,7 @@ Route::get('/vendor/search/{name}', [VendorController::class, 'search']);
 Route::get('/vendor/{id}', [VendorController::class, 'show']);
 Route::delete('/vendor/{id}', [VendorController::class, 'destroy'])
     ->middleware('auth:sanctum');
+Route::get('/vendor/{id}/products', [VendorController::class, 'products']);
 
 Route::get('/category/list', [CategoryController::class, 'index']);
 Route::get('/category/products/{category}', [CategoryController::class, 'show'])

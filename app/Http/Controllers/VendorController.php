@@ -109,6 +109,19 @@ class VendorController extends Controller
         return response()->json($vendors, 200);
     }
 
+    public function products(string $id): JsonResponse
+    {
+        $vendor = Vendor::find($id);
+
+        if (! $vendor) {
+            return response()->json([
+                'message' => 'Vendor cannot be found',
+            ], 422);
+        }
+
+        return response()->json($vendor->products()->get(), 200);
+    }
+
     /**
      * @authenticated
      **/
