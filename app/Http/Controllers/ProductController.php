@@ -6,6 +6,7 @@ use App\Models\Product;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Services\Product\ProductHelper;
 
 class ProductController extends Controller
 {
@@ -82,6 +83,31 @@ class ProductController extends Controller
         $product = Product::create($fields);
 
         return response()->json($product, 201);
+    }
+
+    public function search(Request $request)
+    {
+        if ($request->input('barcode')) {
+            $query = $request->input('barcode');
+            $products = ProductHelper::levenshtein_search($query, 'barcode_upc', 'barcode_eac');
+
+            return response()->json($products);
+        }
+
+        $query = $request->input('query');
+        $tags = explode(' ', $query);
+
+        $results = Product::where(function ($query) use ($tags) {
+            foreach ($tags as $tag) {
+                $query->orWhereRaw('LOWER(tags) like ?', ['%' . strtolower($tag) . '%'])
+                    ->orWhereRaw('LOWER(title) like ?', ['%' . strtolower($tag) . '%'])
+                    ->orWhereRaw('LOWER(description) like ?', ['%' . strtolower($tag) . '%'])
+                    ->orWhereRaw('LOWER(model) like ?', ['%' . strtolower($tag) . '%'])
+                    ->orWhereRaw('LOWER(brand) like ?', ['%' . strtolower($tag) . '%']);
+            }
+        })->get();
+
+        return response()->json($results);
     }
 
     /**

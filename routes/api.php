@@ -30,6 +30,7 @@ Route::get('/category/products/{category}', [CategoryController::class, 'show'])
         ]);
     });
 
+Route::get('/product/search', [ProductController::class, 'search']);
 Route::get('/product/list', [ProductController::class, 'index']);
 Route::post('/product/add', [ProductController::class, 'store'])
     ->middleware('auth:sanctum');
