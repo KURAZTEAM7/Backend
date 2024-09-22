@@ -646,6 +646,54 @@
                     ]
                 },
                 {
+                    "name": "GET api\/product\/search",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/product\/search",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/product\/search"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
                     "name": "GET api\/product\/list",
                     "request": {
                         "url": {
@@ -742,7 +790,7 @@
                                 },
                                 {
                                     "key": "brand",
-                                    "value": "ut",
+                                    "value": "illum",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -888,4 +936,3 @@
             }
         ]
     }
-}

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Services\Product\ProductHelper;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\Services\Product\ProductHelper;
 
 class ProductController extends Controller
 {
@@ -99,11 +99,11 @@ class ProductController extends Controller
 
         $results = Product::where(function ($query) use ($tags) {
             foreach ($tags as $tag) {
-                $query->orWhereRaw('LOWER(tags) like ?', ['%' . strtolower($tag) . '%'])
-                    ->orWhereRaw('LOWER(title) like ?', ['%' . strtolower($tag) . '%'])
-                    ->orWhereRaw('LOWER(description) like ?', ['%' . strtolower($tag) . '%'])
-                    ->orWhereRaw('LOWER(model) like ?', ['%' . strtolower($tag) . '%'])
-                    ->orWhereRaw('LOWER(brand) like ?', ['%' . strtolower($tag) . '%']);
+                $query->orWhereRaw('LOWER(tags) like ?', ['%'.strtolower($tag).'%'])
+                    ->orWhereRaw('LOWER(title) like ?', ['%'.strtolower($tag).'%'])
+                    ->orWhereRaw('LOWER(description) like ?', ['%'.strtolower($tag).'%'])
+                    ->orWhereRaw('LOWER(model) like ?', ['%'.strtolower($tag).'%'])
+                    ->orWhereRaw('LOWER(brand) like ?', ['%'.strtolower($tag).'%']);
             }
         })->get();
 

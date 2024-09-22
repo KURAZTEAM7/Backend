@@ -34,12 +34,12 @@ class ProductSeeder extends Seeder
         $sampleTags = [
             ['electronics', 'new', 'featured'],
             ['sale', 'popular', 'top-rated'],
-            ['limited-edition', 'trending', 'bestseller']
+            ['limited-edition', 'trending', 'bestseller'],
         ];
 
         foreach (range(1, 100) as $i) {
-            $product = new Product();
-            $product->title = $faker->unique()->word . ' ' . $faker->randomElement(['Phone', 'Laptop', 'Tablet', 'Camera', 'Headphones']);
+            $product = new Product;
+            $product->title = $faker->unique()->word.' '.$faker->randomElement(['Phone', 'Laptop', 'Tablet', 'Camera', 'Headphones']);
             $product->description = $faker->sentence(10);
             $product->price = $faker->randomFloat(2, 50, 2000);
             $product->flexible_pricing = $faker->boolean();
@@ -48,7 +48,7 @@ class ProductSeeder extends Seeder
             $product->image_urls = json_encode([
                 $faker->randomElement($imageUrls),
                 $faker->randomElement($imageUrls),
-                $faker->randomElement($imageUrls)
+                $faker->randomElement($imageUrls),
             ]);
             $product->barcode_upc = $faker->ean13;
             $product->barcode_eac = $faker->ean8;

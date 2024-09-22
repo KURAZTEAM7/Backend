@@ -367,6 +367,25 @@ paths:
         required: true
         schema:
           type: string
+  /api/product/search:
+    get:
+      summary: ''
+      operationId: getApiProductSearch
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - Endpoints
+      security: []
   /api/product/list:
     get:
       summary: ''
@@ -421,7 +440,7 @@ paths:
                 brand:
                   type: string
                   description: ''
-                  example: ut
+                  example: illum
                 model:
                   type: string
                   description: ''
