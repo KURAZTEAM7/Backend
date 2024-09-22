@@ -140,13 +140,13 @@ class VendorController extends Controller
             if ($vendor->delete() == 1) {
                 return response()->json([
                     'message' => 'Vendor deleted successfully',
-                ], 204);
+                ], 200);
             }
         }
 
         return response()->json([
             'message' => 'Nothing to delete',
-        ], 204);
+        ], 200);
     }
 
     private function validateLicense(UploadedFile $license, string $tinInput): array

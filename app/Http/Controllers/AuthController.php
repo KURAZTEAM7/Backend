@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
     // Todo: Implement uploading profile pics
-    public function register(Request $request): Response
+    public function register(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
             'first_name' => 'required|string|max:100',
@@ -29,7 +29,7 @@ class AuthController extends Controller
                 'errors' => $validator->errors(),
             ];
 
-            return response($response, 422);
+            return response()->json($response, 422);
         }
 
         $fields = $validator->validated();
@@ -52,10 +52,10 @@ class AuthController extends Controller
             'token' => $token,
         ];
 
-        return response($response, 201);
+        return response()->json($response, 201);
     }
 
-    public function login(Request $request): Response
+    public function login(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
             'email' => 'required|string',
@@ -69,14 +69,14 @@ class AuthController extends Controller
                 'errors' => $validator->errors(),
             ];
 
-            return response($response, 422);
+            return response()->json($response, 422);
         }
 
         $fields = $validator->validated();
         $user = User::where('email', $fields['email'])->first();
 
         if (! $user || ! Hash::check($fields['password'], $user->password)) {
-            return response(['message' => 'Invalid credentials'], 401);
+            return response()->json(['message' => 'Invalid credentials'], 401);
         }
 
         $token = $user->createToken('ecommerce')->plainTextToken;
@@ -87,21 +87,21 @@ class AuthController extends Controller
             'token' => $token,
         ];
 
-        return response($response, 201);
+        return response()->json($response, 201);
     }
 
     /**
      * @authenticated
      **/
-    public function logout(Request $request): Response
+    public function logout(Request $request): JsonResponse
     {
         if (! auth()->check()) {
-            return response(['message' => 'Unauthenticated'], 401);
+            return response()->json(['message' => 'Unauthenticated'], 401);
         }
 
         auth()->user()->tokens()->delete();
 
-        return response(['message' => 'Logout succesful'], 204);
+        return response()->json(['message' => 'Logout succesful'], 200);
     }
 
     // TODO: implement allowing users to logout from other devices
