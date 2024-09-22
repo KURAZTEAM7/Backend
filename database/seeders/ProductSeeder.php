@@ -45,15 +45,15 @@ class ProductSeeder extends Seeder
             $product->flexible_pricing = $faker->boolean();
             $product->brand = $faker->randomElement($brands);
             $product['model'] = strtoupper($faker->lexify('????-###'));
-            $product->image_urls = json_encode([
+            $product->image_urls = [
                 $faker->randomElement($imageUrls),
                 $faker->randomElement($imageUrls),
                 $faker->randomElement($imageUrls),
-            ]);
+            ];
             $product->barcode_upc = $faker->ean13;
             $product->barcode_eac = $faker->ean8;
             $product->remaining_stock = $faker->numberBetween(10, 500);
-            $product->tags = json_encode($faker->randomElement($sampleTags));
+            $product->tags = $faker->randomElement($sampleTags);
             $product->vendor_id = $faker->randomElement($vendorIds);
             $product->category_id = $faker->randomElement($categoryIds);
             $product->save();
