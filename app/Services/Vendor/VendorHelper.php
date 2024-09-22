@@ -84,14 +84,15 @@ class VendorHelper
         }
     }
 
-    public static function populateWithAPI(string $licenseNumber): mixed {
+    public static function populateWithAPI(string $licenseNumber): mixed
+    {
         try {
             $response = Http::withHeaders([
                 'Referer' => 'https://etrade.gov.et/business-license-checker',
-            ])->get('https://etrade.gov.et/api/BusinessMain/GetBusinessByLicenseNo?LicenseNo='. $licenseNumber .'&Tin=null&Lang=en');
+            ])->get('https://etrade.gov.et/api/BusinessMain/GetBusinessByLicenseNo?LicenseNo='.$licenseNumber.'&Tin=null&Lang=en');
 
             if (! $response->successful()) {
-                Log::warning('API response was not successful for Licesnse number: '. $licenseNumber);
+                Log::warning('API response was not successful for Licesnse number: '.$licenseNumber);
 
                 return false;
             }
@@ -106,7 +107,7 @@ class VendorHelper
 
             // Check if the response is successful
             if (! $response->successful()) {
-                Log::warning('API response was not successful for TIN: '. $returned['tin_number']);
+                Log::warning('API response was not successful for TIN: '.$returned['tin_number']);
 
                 return false;
             }
@@ -116,13 +117,14 @@ class VendorHelper
             return $returned;
 
         } catch (\Exception $e) {
-            Log::warning('API response failed for Licesnse number: '. $licenseNumber);
+            Log::warning('API response failed for Licesnse number: '.$licenseNumber);
 
             return false; // Return false if an exception occurred
         }
     }
 
-    private static function mapResponse(array $response): array {
+    private static function mapResponse(array $response): array
+    {
         return [
             'phone_number' => $response['AddressInfo']['RegularPhone'] ?? null,
             'zone' => $response['AddressInfo']['Zone'] ?? null,

@@ -83,7 +83,8 @@ class VendorController extends Controller
         ], 201);
     }
 
-    public function storePopulated(Request $request): JsonResponse {
+    public function storePopulated(Request $request): JsonResponse
+    {
         $validator = Validator::make($request->all(), [
             'license_number' => 'required|string|max:255',
             'logo' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
