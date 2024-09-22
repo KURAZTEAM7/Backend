@@ -15,10 +15,11 @@ class ProductController extends Controller
         return response()->json(Product::all(), 200);
     }
 
-    public function show(string $id): JsonResponse {
+    public function show(string $id): JsonResponse
+    {
         $product = Product::find($id);
 
-        if (!$product) {
+        if (! $product) {
             return response()->json([
                 'message' => 'Vendor cannot be found',
             ], 422);
