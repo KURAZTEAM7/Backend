@@ -10,8 +10,6 @@ class ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run(): void
     {
@@ -38,9 +36,9 @@ class ProductSeeder extends Seeder
             $product->brand = $faker->randomElement($brands);
             $product['model'] = strtoupper($faker->lexify('????-###'));
             $product->image_urls = [
-                "https://random.imagecdn.app/500/500",
-                "https://random.imagecdn.app/500/500",
-                "https://random.imagecdn.app/500/500",
+                'https://random.imagecdn.app/500/500',
+                'https://random.imagecdn.app/500/500',
+                'https://random.imagecdn.app/500/500',
             ];
             $product->barcode_upc = $faker->ean13;
             $product->barcode_eac = $faker->ean8;
