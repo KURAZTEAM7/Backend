@@ -109,7 +109,8 @@ class VendorController extends Controller
         return response()->json($vendors, 200);
     }
 
-    public function products(string $id): JsonResponse {
+    public function products(string $id): JsonResponse
+    {
         $vendor = Vendor::find($id);
 
         if (! $vendor) {
