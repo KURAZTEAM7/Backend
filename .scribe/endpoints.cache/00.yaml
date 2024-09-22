@@ -28,7 +28,7 @@ endpoints:
         name: first_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: ulwttzfxlj
+        example: nkgejmbzhrl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -37,7 +37,7 @@ endpoints:
         name: middle_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: kmyqeowmxfirmdrklgdvvbrl
+        example: lqfxdwpmogo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -46,7 +46,7 @@ endpoints:
         name: last_name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: edxes
+        example: unwzwltbdhdplrkawhhkdfj
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -55,7 +55,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: eddie62@example.com
+        example: pspinka@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -64,7 +64,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
         required: true
-        example: 'g0}DU+'
+        example: '<h5d[eS'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -79,11 +79,11 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: ulwttzfxlj
-      middle_name: kmyqeowmxfirmdrklgdvvbrl
-      last_name: edxes
-      email: eddie62@example.com
-      password: 'g0}DU+'
+      first_name: nkgejmbzhrl
+      middle_name: lqfxdwpmogo
+      last_name: unwzwltbdhdplrkawhhkdfj
+      email: pspinka@example.com
+      password: '<h5d[eS'
     fileParameters:
       picture: null
     responses: []
@@ -118,7 +118,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: lowe.brian@example.net
+        example: kayley91@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -127,14 +127,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'G_a-izyn^}@'
+        example: 'tQ56h2=aqtReD.osP#}5'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: lowe.brian@example.net
-      password: 'G_a-izyn^}@'
+      email: kayley91@example.net
+      password: 'tQ56h2=aqtReD.osP#}5'
     fileParameters: []
     responses: []
     responseFields: []
@@ -172,7 +172,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer he8VDag6bc4361dkZEfvPa5'
+      - 'Bearer e1EcD8Z6k6fgd5habaPV3v4'
     controller: null
     method: null
     route: null
@@ -203,7 +203,7 @@ endpoints:
         name: store_name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: kdpyxh
+        example: ihcumdjnfzmafallzpy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -212,7 +212,7 @@ endpoints:
         name: phone_number
         description: 'Must not be greater than 15 characters.'
         required: true
-        example: h
+        example: aitms
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -221,7 +221,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: amir.corwin@example.com
+        example: herman.cayla@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -239,7 +239,7 @@ endpoints:
         name: zone
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: fshzj
+        example: fuejdugudzmtsiiqope
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -248,7 +248,7 @@ endpoints:
         name: region
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: dmqdznenmoguxodnvnpzqccod
+        example: za
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -257,7 +257,7 @@ endpoints:
         name: google_map_location
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: yecughoqjorbimovq
+        example: mnsrfacafmy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -266,7 +266,7 @@ endpoints:
         name: website
         description: 'Must be a valid URL. Must not be greater than 255 characters.'
         required: false
-        example: owtmtihymnmnvnbqlwx
+        example: matzplvwmadbcscwu
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -275,7 +275,7 @@ endpoints:
         name: telegram
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: vivvcwfysrzdjxy
+        example: nnfysiu
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -284,7 +284,7 @@ endpoints:
         name: whatsapp
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: rbrjtttqz
+        example: cjyrmptjvl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -293,7 +293,7 @@ endpoints:
         name: tin_number
         description: 'Must be 10 characters.'
         required: true
-        example: azodopyyww
+        example: piybskgnqs
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -311,23 +311,23 @@ endpoints:
         name: description
         description: 'Must not be greater than 1000 characters.'
         required: false
-        example: 'Accusamus rerum ex similique modi a.'
+        example: 'Omnis est nisi et fugiat.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      store_name: kdpyxh
-      phone_number: h
-      email: amir.corwin@example.com
-      zone: fshzj
-      region: dmqdznenmoguxodnvnpzqccod
-      google_map_location: yecughoqjorbimovq
-      website: owtmtihymnmnvnbqlwx
-      telegram: vivvcwfysrzdjxy
-      whatsapp: rbrjtttqz
-      tin_number: azodopyyww
-      description: 'Accusamus rerum ex similique modi a.'
+      store_name: ihcumdjnfzmafallzpy
+      phone_number: aitms
+      email: herman.cayla@example.com
+      zone: fuejdugudzmtsiiqope
+      region: za
+      google_map_location: mnsrfacafmy
+      website: matzplvwmadbcscwu
+      telegram: nnfysiu
+      whatsapp: cjyrmptjvl
+      tin_number: piybskgnqs
+      description: 'Omnis est nisi et fugiat.'
     fileParameters:
       logo: null
       license: null
@@ -336,7 +336,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Zf34aveVPDgba6681hd5ckE'
+      - 'Bearer ebkhgcd3aV45Z616aDv8EPf'
     controller: null
     method: null
     route: null
@@ -366,7 +366,7 @@ endpoints:
         name: page
         description: 'Must be at least 0.'
         required: false
-        example: 86
+        example: 36
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -375,19 +375,19 @@ endpoints:
         name: per_page
         description: 'Must be at least 0.'
         required: false
-        example: 18
+        example: 73
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      page: 86
-      per_page: 18
+      page: 36
+      per_page: 73
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"current_page":86,"data":[],"first_page_url":"http:\/\/localhost\/api\/vendor\/list?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/vendor\/list?page=1","links":[{"url":"http:\/\/localhost\/api\/vendor\/list?page=85","label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/vendor\/list?page=1","label":"1","active":false},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/vendor\/list","per_page":18,"prev_page_url":"http:\/\/localhost\/api\/vendor\/list?page=85","to":null,"total":0}'
+        content: '{"current_page":36,"data":[],"first_page_url":"http:\/\/localhost\/api\/vendor\/list?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/vendor\/list?page=1","links":[{"url":"http:\/\/localhost\/api\/vendor\/list?page=35","label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/vendor\/list?page=1","label":"1","active":false},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/vendor\/list","per_page":73,"prev_page_url":"http:\/\/localhost\/api\/vendor\/list?page=35","to":null,"total":0}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -421,13 +421,13 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: magni
+        example: ea
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      name: magni
+      name: ea
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -470,13 +470,13 @@ endpoints:
         name: id
         description: 'The ID of the vendor.'
         required: true
-        example: 18
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 18
+      id: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -520,13 +520,13 @@ endpoints:
         name: id
         description: 'The ID of the vendor.'
         required: true
-        example: 10
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 10
+      id: 4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -537,7 +537,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1EZahe6a5gdkPfcV36v8Db4'
+      - 'Bearer hZvaf4c8VdkPD5g1ea6b36E'
     controller: null
     method: null
     route: null
@@ -602,13 +602,13 @@ endpoints:
         name: category_slug
         description: 'The slug of the category.'
         required: true
-        example: dolores
+        example: optio
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      category_slug: dolores
+      category_slug: optio
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -616,7 +616,7 @@ endpoints:
         name: page
         description: 'Must be at least 1.'
         required: false
-        example: 13
+        example: 40
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -625,14 +625,14 @@ endpoints:
         name: per_page
         description: 'Must be at least 1.'
         required: false
-        example: 85
+        example: 71
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      page: 13
-      per_page: 85
+      page: 40
+      per_page: 71
     fileParameters: []
     responses:
       -
@@ -675,7 +675,7 @@ endpoints:
         name: page
         description: 'Must be at least 1.'
         required: false
-        example: 27
+        example: 82
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -684,19 +684,19 @@ endpoints:
         name: per_page
         description: 'Must be at least 1.'
         required: false
-        example: 35
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      page: 27
-      per_page: 35
+      page: 82
+      per_page: 13
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"current_page":27,"data":[],"first_page_url":"http:\/\/localhost\/api\/product\/list?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/product\/list?page=1","links":[{"url":"http:\/\/localhost\/api\/product\/list?page=26","label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/product\/list?page=1","label":"1","active":false},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/product\/list","per_page":35,"prev_page_url":"http:\/\/localhost\/api\/product\/list?page=26","to":null,"total":0}'
+        content: '{"current_page":82,"data":[],"first_page_url":"http:\/\/localhost\/api\/product\/list?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/product\/list?page=1","links":[{"url":"http:\/\/localhost\/api\/product\/list?page=81","label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/product\/list?page=1","label":"1","active":false},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/product\/list","per_page":13,"prev_page_url":"http:\/\/localhost\/api\/product\/list?page=81","to":null,"total":0}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -735,7 +735,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: trpypkabfujfayvclg
+        example: ljuhozrnmsxggpikq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -744,7 +744,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Nobis consequuntur facilis expedita dicta.'
+        example: 'Qui vel alias in assumenda aut.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -753,7 +753,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 83786.2
+        example: 1568589.85
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -762,7 +762,7 @@ endpoints:
         name: flexible_pricing
         description: ''
         required: true
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -771,7 +771,7 @@ endpoints:
         name: brand
         description: ''
         required: false
-        example: ut
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -780,7 +780,7 @@ endpoints:
         name: model
         description: ''
         required: false
-        example: nihil
+        example: sint
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -799,7 +799,7 @@ endpoints:
         name: barcode_upc
         description: 'image validation. Must be 12 characters.'
         required: false
-        example: qrwwirckheci
+        example: avmzhlleekvh
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -808,7 +808,7 @@ endpoints:
         name: barcode_eac
         description: 'Must be 13 characters.'
         required: false
-        example: knuhhvfqadwcq
+        example: oauadiwpethxz
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -817,7 +817,7 @@ endpoints:
         name: remaining_stock
         description: 'Must be at least 0.'
         required: true
-        example: 79
+        example: 49
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -835,22 +835,22 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: possimus
+        example: suscipit
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: trpypkabfujfayvclg
-      description: 'Nobis consequuntur facilis expedita dicta.'
-      price: 83786.2
-      flexible_pricing: false
-      brand: ut
-      model: nihil
-      barcode_upc: qrwwirckheci
-      barcode_eac: knuhhvfqadwcq
-      remaining_stock: 79
-      category_id: possimus
+      title: ljuhozrnmsxggpikq
+      description: 'Qui vel alias in assumenda aut.'
+      price: 1568589.85
+      flexible_pricing: true
+      brand: aut
+      model: sint
+      barcode_upc: avmzhlleekvh
+      barcode_eac: oauadiwpethxz
+      remaining_stock: 49
+      category_id: suscipit
     fileParameters:
       images:
         - null
@@ -859,7 +859,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer V6fehE8PZDgaakc3654dbv1'
+      - 'Bearer a6aVZ8Pc43D1Ekg6h5fbevd'
     controller: null
     method: null
     route: null
@@ -886,13 +886,13 @@ endpoints:
         name: id
         description: 'The ID of the product.'
         required: true
-        example: 20
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 20
+      id: 13
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -903,7 +903,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Z8v3D6dkah1eP4b5EgVfc6a'
+      - 'Bearer kPDfva8geh3dZa41VE56bc6'
     controller: null
     method: null
     route: null

@@ -26,23 +26,23 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: ulwttzfxlj
+                  example: nkgejmbzhrl
                 middle_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: kmyqeowmxfirmdrklgdvvbrl
+                  example: lqfxdwpmogo
                 last_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: edxes
+                  example: unwzwltbdhdplrkawhhkdfj
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: eddie62@example.com
+                  example: pspinka@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
-                  example: 'g0}DU+'
+                  example: '<h5d[eS'
                 picture:
                   type: string
                   format: binary
@@ -73,11 +73,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: lowe.brian@example.net
+                  example: kayley91@example.net
                 password:
                   type: string
                   description: ''
-                  example: 'G_a-izyn^}@'
+                  example: 'tQ56h2=aqtReD.osP#}5'
               required:
                 - email
                 - password
@@ -110,15 +110,15 @@ paths:
                 store_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kdpyxh
+                  example: ihcumdjnfzmafallzpy
                 phone_number:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: h
+                  example: aitms
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: amir.corwin@example.com
+                  example: herman.cayla@example.com
                 logo:
                   type: string
                   format: binary
@@ -126,31 +126,31 @@ paths:
                 zone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: fshzj
+                  example: fuejdugudzmtsiiqope
                 region:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dmqdznenmoguxodnvnpzqccod
+                  example: za
                 google_map_location:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: yecughoqjorbimovq
+                  example: mnsrfacafmy
                 website:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: owtmtihymnmnvnbqlwx
+                  example: matzplvwmadbcscwu
                 telegram:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vivvcwfysrzdjxy
+                  example: nnfysiu
                 whatsapp:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rbrjtttqz
+                  example: cjyrmptjvl
                 tin_number:
                   type: string
                   description: 'Must be 10 characters.'
-                  example: azodopyyww
+                  example: piybskgnqs
                 license:
                   type: string
                   format: binary
@@ -158,7 +158,7 @@ paths:
                 description:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: 'Accusamus rerum ex similique modi a.'
+                  example: 'Omnis est nisi et fugiat.'
               required:
                 - store_name
                 - phone_number
@@ -181,7 +181,7 @@ paths:
               schema:
                 type: object
                 example:
-                  current_page: 86
+                  current_page: 36
                   data: []
                   first_page_url: 'http://localhost/api/vendor/list?page=1'
                   from: null
@@ -189,7 +189,7 @@ paths:
                   last_page_url: 'http://localhost/api/vendor/list?page=1'
                   links:
                     -
-                      url: 'http://localhost/api/vendor/list?page=85'
+                      url: 'http://localhost/api/vendor/list?page=35'
                       label: '&laquo; Previous'
                       active: false
                     -
@@ -202,14 +202,14 @@ paths:
                       active: false
                   next_page_url: null
                   path: 'http://localhost/api/vendor/list'
-                  per_page: 18
-                  prev_page_url: 'http://localhost/api/vendor/list?page=85'
+                  per_page: 73
+                  prev_page_url: 'http://localhost/api/vendor/list?page=35'
                   to: null
                   total: 0
                 properties:
                   current_page:
                     type: integer
-                    example: 86
+                    example: 36
                   data:
                     type: array
                     example: []
@@ -229,7 +229,7 @@ paths:
                     type: array
                     example:
                       -
-                        url: 'http://localhost/api/vendor/list?page=85'
+                        url: 'http://localhost/api/vendor/list?page=35'
                         label: '&laquo; Previous'
                         active: false
                       -
@@ -245,7 +245,7 @@ paths:
                       properties:
                         url:
                           type: string
-                          example: 'http://localhost/api/vendor/list?page=85'
+                          example: 'http://localhost/api/vendor/list?page=35'
                         label:
                           type: string
                           example: '&laquo; Previous'
@@ -260,10 +260,10 @@ paths:
                     example: 'http://localhost/api/vendor/list'
                   per_page:
                     type: integer
-                    example: 18
+                    example: 73
                   prev_page_url:
                     type: string
-                    example: 'http://localhost/api/vendor/list?page=85'
+                    example: 'http://localhost/api/vendor/list?page=35'
                   to:
                     type: string
                     example: null
@@ -282,11 +282,11 @@ paths:
                 page:
                   type: integer
                   description: 'Must be at least 0.'
-                  example: 86
+                  example: 36
                 per_page:
                   type: integer
                   description: 'Must be at least 0.'
-                  example: 18
+                  example: 73
       security: []
   '/api/vendor/search/{name}':
     get:
@@ -315,7 +315,7 @@ paths:
         in: path
         name: name
         description: ''
-        example: magni
+        example: ea
         required: true
         schema:
           type: string
@@ -354,7 +354,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the vendor.'
-        example: 18
+        example: 7
         required: true
         schema:
           type: integer
@@ -408,18 +408,18 @@ paths:
                 page:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 13
+                  example: 40
                 per_page:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 85
+                  example: 71
       security: []
     parameters:
       -
         in: path
         name: category_slug
         description: 'The slug of the category.'
-        example: dolores
+        example: optio
         required: true
         schema:
           type: string
@@ -437,7 +437,7 @@ paths:
               schema:
                 type: object
                 example:
-                  current_page: 27
+                  current_page: 82
                   data: []
                   first_page_url: 'http://localhost/api/product/list?page=1'
                   from: null
@@ -445,7 +445,7 @@ paths:
                   last_page_url: 'http://localhost/api/product/list?page=1'
                   links:
                     -
-                      url: 'http://localhost/api/product/list?page=26'
+                      url: 'http://localhost/api/product/list?page=81'
                       label: '&laquo; Previous'
                       active: false
                     -
@@ -458,14 +458,14 @@ paths:
                       active: false
                   next_page_url: null
                   path: 'http://localhost/api/product/list'
-                  per_page: 35
-                  prev_page_url: 'http://localhost/api/product/list?page=26'
+                  per_page: 13
+                  prev_page_url: 'http://localhost/api/product/list?page=81'
                   to: null
                   total: 0
                 properties:
                   current_page:
                     type: integer
-                    example: 27
+                    example: 82
                   data:
                     type: array
                     example: []
@@ -485,7 +485,7 @@ paths:
                     type: array
                     example:
                       -
-                        url: 'http://localhost/api/product/list?page=26'
+                        url: 'http://localhost/api/product/list?page=81'
                         label: '&laquo; Previous'
                         active: false
                       -
@@ -501,7 +501,7 @@ paths:
                       properties:
                         url:
                           type: string
-                          example: 'http://localhost/api/product/list?page=26'
+                          example: 'http://localhost/api/product/list?page=81'
                         label:
                           type: string
                           example: '&laquo; Previous'
@@ -516,10 +516,10 @@ paths:
                     example: 'http://localhost/api/product/list'
                   per_page:
                     type: integer
-                    example: 35
+                    example: 13
                   prev_page_url:
                     type: string
-                    example: 'http://localhost/api/product/list?page=26'
+                    example: 'http://localhost/api/product/list?page=81'
                   to:
                     type: string
                     example: null
@@ -538,11 +538,11 @@ paths:
                 page:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 27
+                  example: 82
                 per_page:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 35
+                  example: 13
       security: []
   /api/product/add:
     post:
@@ -563,27 +563,27 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: trpypkabfujfayvclg
+                  example: ljuhozrnmsxggpikq
                 description:
                   type: string
                   description: ''
-                  example: 'Nobis consequuntur facilis expedita dicta.'
+                  example: 'Qui vel alias in assumenda aut.'
                 price:
                   type: number
                   description: ''
-                  example: 83786.2
+                  example: 1568589.85
                 flexible_pricing:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                 brand:
                   type: string
                   description: ''
-                  example: ut
+                  example: aut
                 model:
                   type: string
                   description: ''
-                  example: nihil
+                  example: sint
                 images:
                   type: array
                   description: 'Must be an image. Must not be greater than 2048 kilobytes.'
@@ -593,15 +593,15 @@ paths:
                 barcode_upc:
                   type: string
                   description: 'image validation. Must be 12 characters.'
-                  example: qrwwirckheci
+                  example: avmzhlleekvh
                 barcode_eac:
                   type: string
                   description: 'Must be 13 characters.'
-                  example: knuhhvfqadwcq
+                  example: oauadiwpethxz
                 remaining_stock:
                   type: integer
                   description: 'Must be at least 0.'
-                  example: 79
+                  example: 49
                 tags:
                   type: object
                   description: ''
@@ -610,7 +610,7 @@ paths:
                 category_id:
                   type: string
                   description: ''
-                  example: possimus
+                  example: suscipit
               required:
                 - title
                 - price
@@ -631,7 +631,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product.'
-        example: 20
+        example: 13
         required: true
         schema:
           type: integer
