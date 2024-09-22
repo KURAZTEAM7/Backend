@@ -83,6 +83,9 @@ class VendorController extends Controller
         ], 201);
     }
 
+    /**
+     * @authenticated
+     **/
     public function storePopulated(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "4c7bc698-cc52-4bdb-98fe-9c10591238fa",
+        "_postman_id": "3a6b20e4-239f-402c-b9a0-7c21be187734",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -44,31 +44,31 @@
                             "formdata": [
                                 {
                                     "key": "first_name",
-                                    "value": "ecxfoygg",
+                                    "value": "ez",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "middle_name",
-                                    "value": "uxtebbiiyj",
+                                    "value": "raipqrytleop",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "last_name",
-                                    "value": "pdytozaimbffyyhoqgpofimps",
+                                    "value": "btkkeshqkra",
                                     "type": "text",
                                     "description": "Must not be greater than 100 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "reid.auer@example.com",
+                                    "value": "roselyn94@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "password",
-                                    "value": ".rr,I=0Px2(^`?UkMU=",
+                                    "value": "~C\"Br#Tu<#MV#_",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 64 characters."
                                 },
@@ -108,7 +108,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"denesik.beryl@example.com\",\"password\":\"WY*f{6#:&'hs3-SG\"}"
+                            "raw": "{\"email\":\"effertz.marcellus@example.net\",\"password\":\"rgKz^\\\"Cze)fC?b[.juKo\"}"
                         },
                         "description": "",
                         "auth": {
@@ -167,67 +167,67 @@
                             "formdata": [
                                 {
                                     "key": "store_name",
-                                    "value": "dplyvkrhwxqwkjnqhtgtudgt",
+                                    "value": "yl",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "phone_number",
-                                    "value": "fozbaivt",
+                                    "value": "bfrmu",
                                     "type": "text",
                                     "description": "Must not be greater than 15 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "selmer07@example.net",
+                                    "value": "adan38@example.com",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "zone",
-                                    "value": "jszleessihngbtkrev",
+                                    "value": "itr",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "region",
-                                    "value": "m",
+                                    "value": "paijzxkaecr",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "google_map_location",
-                                    "value": "boperycbcorz",
+                                    "value": "wvxvskcdrvuvr",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "website",
-                                    "value": "gkbkhczjxescqvwcgcowqm",
+                                    "value": "pajkhizf",
                                     "type": "text",
                                     "description": "Must be a valid URL. Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "telegram",
-                                    "value": "aqri",
+                                    "value": "axrmokhnogip",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "whatsapp",
-                                    "value": "quicmiaj",
+                                    "value": "irmpfeguqbkg",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "tin_number",
-                                    "value": "cfobzfbyyw",
+                                    "value": "pqxpemdtmo",
                                     "type": "text",
                                     "description": "Must be 10 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Eos quis consequatur voluptatibus veniam.",
+                                    "value": "Inventore debitis accusantium pariatur dolores tenetur.",
                                     "type": "text",
                                     "description": "Must not be greater than 1000 characters."
                                 },
@@ -272,7 +272,7 @@
                             "formdata": [
                                 {
                                     "key": "license_number",
-                                    "value": "llkyhnqvk",
+                                    "value": "iebtjy",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
@@ -288,10 +288,7 @@
                                 }
                             ]
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -355,7 +352,7 @@
                                 {
                                     "id": "name",
                                     "key": "name",
-                                    "value": "veritatis",
+                                    "value": "tenetur",
                                     "description": ""
                                 }
                             ]
@@ -411,7 +408,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "12",
+                                    "value": "15",
                                     "description": "The ID of the vendor."
                                 }
                             ]
@@ -467,7 +464,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "8",
+                                    "value": "15",
                                     "description": "The ID of the vendor."
                                 }
                             ]
@@ -500,7 +497,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "4",
+                                    "value": "16",
                                     "description": "The ID of the vendor."
                                 }
                             ]
@@ -604,7 +601,7 @@
                                 {
                                     "id": "category_slug",
                                     "key": "category_slug",
-                                    "value": "eaque",
+                                    "value": "nobis",
                                     "description": "The slug of the category."
                                 }
                             ]
@@ -721,61 +718,61 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "kwwyplcdtskqz",
+                                    "value": "hvomygvhhcusdgepebtxxm",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Libero nemo error est velit molestiae ducimus quam exercitationem.",
+                                    "value": "Et quia nostrum facilis quo in laboriosam.",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "price",
-                                    "value": 4744717.31678,
+                                    "value": 295784.398,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "flexible_pricing",
-                                    "value": true,
+                                    "value": false,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "brand",
-                                    "value": "nisi",
+                                    "value": "voluptatibus",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "model",
-                                    "value": "non",
+                                    "value": "accusantium",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "barcode_upc",
-                                    "value": "cvhspclckbym",
+                                    "value": "mdvlvajvtmcg",
                                     "type": "text",
                                     "description": "image validation. Must be 12 characters."
                                 },
                                 {
                                     "key": "barcode_eac",
-                                    "value": "cjfaipawgpeyv",
+                                    "value": "oihsojfvbcpks",
                                     "type": "text",
                                     "description": "Must be 13 characters."
                                 },
                                 {
                                     "key": "remaining_stock",
-                                    "value": 31,
+                                    "value": 19,
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "ipsum",
+                                    "value": "et",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -802,7 +799,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "6",
+                                    "value": "4",
                                     "description": "The ID of the product."
                                 }
                             ]
