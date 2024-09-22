@@ -21,14 +21,6 @@ class ProductSeeder extends Seeder
         $vendorIds = \App\Models\Vendor::pluck('id')->toArray();
         $categoryIds = \App\Models\Category::pluck('id')->toArray();
 
-        // Predefined real image URLs (you can replace these with more relevant images for your product categories)
-        $imageUrls = [
-            'https://example.com/images/product1.jpg',
-            'https://example.com/images/product2.jpg',
-            'https://example.com/images/product3.jpg',
-            'https://example.com/images/product4.jpg',
-        ];
-
         // Sample product categories, brands, and tags to make search functionality testing better
         $brands = ['Apple', 'Samsung', 'Sony', 'Dell', 'HP'];
         $sampleTags = [
@@ -46,9 +38,9 @@ class ProductSeeder extends Seeder
             $product->brand = $faker->randomElement($brands);
             $product['model'] = strtoupper($faker->lexify('????-###'));
             $product->image_urls = [
-                $faker->randomElement($imageUrls),
-                $faker->randomElement($imageUrls),
-                $faker->randomElement($imageUrls),
+                "https://random.imagecdn.app/500/500",
+                "https://random.imagecdn.app/500/500",
+                "https://random.imagecdn.app/500/500",
             ];
             $product->barcode_upc = $faker->ean13;
             $product->barcode_eac = $faker->ean8;
