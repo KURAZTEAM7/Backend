@@ -83,4 +83,51 @@ class VendorHelper
             return false; // Return false if an exception occurred
         }
     }
+
+    public static function populateWithAPI(string $licenseNumber): mixed {
+        try {
+            $response = Http::withHeaders([
+                'Referer' => 'https://etrade.gov.et/business-license-checker',
+            ])->get('https://etrade.gov.et/api/BusinessMain/GetBusinessByLicenseNo?LicenseNo='. $licenseNumber .'&Tin=null&Lang=en');
+
+            if (! $response->successful()) {
+                Log::warning('API response was not successful for Licesnse number: '. $licenseNumber);
+
+                return false;
+            }
+
+            $vendorDetails = $response->json();
+
+            $returned = self::mapResponse($vendorDetails);
+
+            $response = Http::withHeaders([
+                'Referer' => 'https://etrade.gov.et/business-license-checker',
+            ])->get('https://etrade.gov.et/api/Registration/GetRegistrationInfoByTin/'.$returned['tin_number'].'/en');
+
+            // Check if the response is successful
+            if (! $response->successful()) {
+                Log::warning('API response was not successful for TIN: '. $returned['tin_number']);
+
+                return false;
+            }
+
+            $returned['store_name'] = $response->json()['BusinessName'];
+
+            return $returned;
+
+        } catch (\Exception $e) {
+            Log::warning('API response failed for Licesnse number: '. $licenseNumber);
+
+            return false; // Return false if an exception occurred
+        }
+    }
+
+    private static function mapResponse(array $response): array {
+        return [
+            'phone_number' => $response['AddressInfo']['RegularPhone'] ?? null,
+            'zone' => $response['AddressInfo']['Zone'] ?? null,
+            'region' => $response['AddressInfo']['Region'] ?? null,
+            'tin_number' => $response['OwnerTIN'],
+        ];
+    }
 }

@@ -25,7 +25,7 @@ class VendorController extends Controller
         $validator = Validator::make($request->all(), [
             'store_name' => 'required|string|max:255',
             'phone_number' => 'required|string|max:15',
-            'email' => 'required|email|unique:vendors,email',
+            'email' => 'email|unique:vendors,email',
             'logo' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
             'zone' => 'required|string|max:255',
             'region' => 'required|string|max:255',
@@ -76,6 +76,80 @@ class VendorController extends Controller
 
         // Save vendor data
         $vendor = Vendor::create($fields);
+
+        return response()->json([
+            'message' => 'Vendor registered successfully',
+            'vendor' => $vendor,
+        ], 201);
+    }
+
+    public function storePopulated(Request $request): JsonResponse {
+        $validator = Validator::make($request->all(), [
+            'license_number' => 'required|string|max:255',
+            'logo' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
+            'license' => 'required|file|mimes:jpg,png|max:2048',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'Validation failed',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        $fields = $validator->validated();
+
+        $user_id = auth()->user()->id;
+        $checkIfExists = Vendor::where('user_id', $user_id)->first();
+
+        if ($checkIfExists) {
+            return response()->json([
+                'message' => 'User already manages a vendor',
+            ], 406);
+        }
+
+        $result = VendorHelper::populateWithAPI($fields['license_number']);
+
+        if ($result == false) {
+            return response()->json([
+                'message' => 'License number does not seem valid',
+            ], 422);
+        }
+
+        $validator = Validator::make($result, [
+            'tin_number' => 'required|string|unique:vendors,tin_number|size:10',
+            'store_name' => 'required|string|max:255',
+            'phone_number' => 'required|string|max:15',
+            'zone' => 'required|string|max:255',
+            'region' => 'required|string|max:255',
+            'tin_number' => 'required|string|unique:vendors,tin_number|size:10',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'Validation failed',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        $response = $validator->validated();
+
+        $licenseValidation = $this->validateLicense($request->file('license'), $response['tin_number']);
+
+        if (! $licenseValidation['isValid']) {
+            return response()->json([
+                'message' => 'Invalid License',
+                'error' => $licenseValidation['error'],
+            ], 422);
+        }
+
+        [$response['license'], $response['license_public_id']] = $this->uploadToCloudinary($request->file('license'), 'vendor_licenses');
+        if ($request->hasFile('logo')) {
+            [$response['logo'], $response['logo_public_id']] = $this->uploadToCloudinary($request->file('logo'), 'vendor_logos');
+        }
+
+        $response['user_id'] = $user_id;
+        $vendor = Vendor::create($response);
 
         return response()->json([
             'message' => 'Vendor registered successfully',
