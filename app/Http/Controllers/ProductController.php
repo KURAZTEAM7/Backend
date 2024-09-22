@@ -85,7 +85,7 @@ class ProductController extends Controller
         return response()->json($product, 201);
     }
 
-    public function search(Request $request)
+    public function search(Request $request): JsonResponse
     {
         if ($request->input('barcode')) {
             $query = $request->input('barcode');
@@ -113,7 +113,7 @@ class ProductController extends Controller
     /**
      * @authenticated
      **/
-    public function destroy($id)
+    public function destroy($id): JsonResponse
     {
         $vendor = auth()->user()->vendor;
 

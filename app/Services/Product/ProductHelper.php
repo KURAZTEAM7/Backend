@@ -6,7 +6,7 @@ use App\Models\Product;
 
 class ProductHelper
 {
-    public static function levenshtein_search($query, $property1, $property2 = 'id'): array
+    public static function levenshtein_search(string $query, string $property1, $property2 = 'id'): array
     {
         $allProducts = Product::whereNotNull($property1)
             ->orWhereNotNull($property2)
