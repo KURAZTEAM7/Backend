@@ -187,9 +187,12 @@ class VendorController extends Controller
         return response()->json($vendors, 200);
     }
 
-    public function products(string $id): JsonResponse
+    /**
+     * @authenticated
+     **/
+    public function products(): JsonResponse
     {
-        $vendor = Vendor::find($id);
+        $vendor = auth()->user()->vendor;
 
         if (! $vendor) {
             return response()->json([
@@ -203,16 +206,10 @@ class VendorController extends Controller
     /**
      * @authenticated
      **/
-    public function destroy(string $id): JsonResponse
+    public function destroy(): JsonResponse
     {
-        $vendor = Vendor::find($id);
+        $vendor = auth()->user()->vendor;
         if ($vendor) {
-            if (auth()->id() != $vendor->user_id) {
-                return response()->json([
-                    'message' => 'Unauthorized',
-                ], 403);
-            }
-
             if ($vendor->delete() == 1) {
                 return response()->json([
                     'message' => 'Vendor deleted successfully',
