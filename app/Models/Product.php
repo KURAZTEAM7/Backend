@@ -5,14 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Product extends Model
 {
     use HasFactory;
-
-    protected $table = 'products';
-
-    protected $primaryKey = 'product_id';
 
     protected $fillable = [
         'title',
@@ -44,5 +41,9 @@ class Product extends Model
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function orders(): HasMany {
+        return $this->hasMany(Order::class)->chaperone();;
     }
 }
