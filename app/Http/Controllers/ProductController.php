@@ -26,7 +26,12 @@ class ProductController extends Controller
             ], 422);
         }
 
-        return response()->json($product, 200);
+        $similar = ProductHelper::findSimilar($product);
+
+        return response()->json([
+            'product' => $product,
+            'similar' => $similar,
+        ]);
     }
 
     /**
@@ -87,27 +92,63 @@ class ProductController extends Controller
 
     public function search(Request $request): JsonResponse
     {
-        if ($request->input('barcode')) {
-            $query = $request->input('barcode');
-            $products = ProductHelper::levenshtein_search($query, 'barcode_upc', 'barcode_eac');
+        $validator = Validator::make($request->all(), [
+            'barcode' => 'nullable|string|min:5|max:15',
+            'query' => 'nullable|string|min:1',
+            'min' => 'nullable|numeric|min:0',
+            'max' => 'nullable|numeric|min:0',
+        ]);
 
-            return response()->json($products);
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'Validation failed',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        if ($request->filled('barcode')) {
+            $barcodeQuery = $request->input('barcode');
+            $products = ProductHelper::levenshtein_search($barcodeQuery, 'barcode_upc', 'barcode_eac');
+            if (! $products) {
+                return response()->json([], 200);
+            }
+            $url = url('/product/'.$products[0]['product_id']);
+
+            return response()->json(['url' => $url]);
         }
 
         $query = $request->input('query');
+        $minPrice = $request->input('min');
+        $maxPrice = $request->input('max');
+
+        if (! $query) {
+            return response()->json([], 200);
+        }
+
+        // Convert query string into an array of tags
         $tags = explode(' ', $query);
 
         $results = Product::where(function ($query) use ($tags) {
             foreach ($tags as $tag) {
-                $query->orWhereRaw('LOWER(tags) like ?', ['%'.strtolower($tag).'%'])
-                    ->orWhereRaw('LOWER(title) like ?', ['%'.strtolower($tag).'%'])
-                    ->orWhereRaw('LOWER(description) like ?', ['%'.strtolower($tag).'%'])
-                    ->orWhereRaw('LOWER(model) like ?', ['%'.strtolower($tag).'%'])
-                    ->orWhereRaw('LOWER(brand) like ?', ['%'.strtolower($tag).'%']);
+                $tag = strtolower($tag);
+                $query->orWhereRaw('LOWER(tags) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(title) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(description) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(model) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(brand) LIKE ?', ['%'.$tag.'%']);
             }
-        })->get();
+        });
 
-        return response()->json($results);
+        if ($minPrice) {  // Apply price filtering if 'min' or 'max' are provided
+            $results->where('price', '>=', $minPrice);
+        }
+        if ($maxPrice) {
+            $results->where('price', '<=', $maxPrice);
+        }
+
+        $results = $results->get();
+
+        return response()->json([count($results), $results]);
     }
 
     /**
