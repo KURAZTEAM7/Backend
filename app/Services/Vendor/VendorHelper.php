@@ -101,6 +101,9 @@ class VendorHelper
 
             $returned = self::mapResponse($vendorDetails);
 
+            if ($returned['store_name'])
+                return $returned;
+
             $response = Http::withHeaders([
                 'Referer' => 'https://etrade.gov.et/business-license-checker',
             ])->get('https://etrade.gov.et/api/Registration/GetRegistrationInfoByTin/'.$returned['tin_number'].'/en');
@@ -130,6 +133,7 @@ class VendorHelper
             'zone' => $response['AddressInfo']['Zone'] ?? null,
             'region' => $response['AddressInfo']['Region'] ?? null,
             'tin_number' => $response['OwnerTIN'],
+            'store_name' => $response['TradeName'],
         ];
     }
 }
