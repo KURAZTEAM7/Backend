@@ -206,6 +206,22 @@ class VendorController extends Controller
     /**
      * @authenticated
      **/
+    public function orders(): JsonResponse
+    {
+        $vendor = auth()->user()->vendor;
+
+        if (! $vendor) {
+            return response()->json([
+                'message' => 'Vendor cannot be found',
+            ], 422);
+        }
+
+        return response()->json($vendor->orders()->get(), 200);
+    }
+
+    /**
+     * @authenticated
+     **/
     public function destroy(): JsonResponse
     {
         $vendor = auth()->user()->vendor;
