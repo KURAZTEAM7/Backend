@@ -17,10 +17,11 @@ Route::post('/vendor/register/bylicense', [VendorController::class, 'storePopula
     ->middleware('auth:sanctum');
 Route::get('/vendor/list', [VendorController::class, 'index']);
 Route::get('/vendor/search/{name}', [VendorController::class, 'search']);
-Route::get('/vendor/{id}', [VendorController::class, 'show']);
-Route::delete('/vendor/{id}', [VendorController::class, 'destroy'])
+Route::get('/vendor/products', [VendorController::class, 'products'])
     ->middleware('auth:sanctum');
-Route::get('/vendor/{id}/products', [VendorController::class, 'products']);
+Route::get('/vendor/{id}', [VendorController::class, 'show']);
+Route::delete('/vendor/', [VendorController::class, 'destroy'])
+    ->middleware('auth:sanctum');
 
 Route::get('/category/list', [CategoryController::class, 'index']);
 Route::get('/category/products/{category}', [CategoryController::class, 'show'])
