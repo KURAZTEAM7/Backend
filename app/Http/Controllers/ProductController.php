@@ -20,7 +20,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
 
-        if (!$product) {
+        if (! $product) {
             return response()->json([
                 'message' => 'Product cannot be found',
             ], 422);
@@ -65,7 +65,7 @@ class ProductController extends Controller
         $fields = $validator->validated();
 
         $vendor = auth()->user()->vendor;
-        if (!$vendor) {
+        if (! $vendor) {
             return response()->json([
                 'message' => 'Unauthorized',
             ], 403);
@@ -109,9 +109,11 @@ class ProductController extends Controller
         if ($request->filled('barcode')) {
             $barcodeQuery = $request->input('barcode');
             $products = ProductHelper::levenshtein_search($barcodeQuery, 'barcode_upc', 'barcode_eac');
-            if (!$products)
+            if (! $products) {
                 return response()->json([], 200);
-            $url = url('/product/' . $products[0]['product_id']);
+            }
+            $url = url('/product/'.$products[0]['product_id']);
+
             return response()->json(['url' => $url]);
         }
 
@@ -119,7 +121,7 @@ class ProductController extends Controller
         $minPrice = $request->input('min');
         $maxPrice = $request->input('max');
 
-        if (!$query) {
+        if (! $query) {
             return response()->json([], 200);
         }
 
@@ -129,11 +131,11 @@ class ProductController extends Controller
         $results = Product::where(function ($query) use ($tags) {
             foreach ($tags as $tag) {
                 $tag = strtolower($tag);
-                $query->orWhereRaw('LOWER(tags) LIKE ?', ['%' . $tag . '%'])
-                    ->orWhereRaw('LOWER(title) LIKE ?', ['%' . $tag . '%'])
-                    ->orWhereRaw('LOWER(description) LIKE ?', ['%' . $tag . '%'])
-                    ->orWhereRaw('LOWER(model) LIKE ?', ['%' . $tag . '%'])
-                    ->orWhereRaw('LOWER(brand) LIKE ?', ['%' . $tag . '%']);
+                $query->orWhereRaw('LOWER(tags) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(title) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(description) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(model) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(brand) LIKE ?', ['%'.$tag.'%']);
             }
         });
 
@@ -156,7 +158,7 @@ class ProductController extends Controller
     {
         $vendor = auth()->user()->vendor;
 
-        if (!$vendor) {
+        if (! $vendor) {
             return response()->json([
                 'message' => 'Unauthorized',
             ], 403);
@@ -164,7 +166,7 @@ class ProductController extends Controller
 
         $product = Product::find($id);
 
-        if (!$product) {
+        if (! $product) {
             return response()->json([
                 'message' => 'Nothing to delete',
             ], 200);
