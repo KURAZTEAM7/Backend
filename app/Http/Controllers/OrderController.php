@@ -4,20 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\Product;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Http\JsonResponse;
 
 class OrderController extends Controller
 {
     /**
      * @authenticated
      **/
-    public function store(Request $request): JsonResponse {
+    public function store(Request $request): JsonResponse
+    {
         $validator = Validator::make($request->all(), [
             'product_id' => 'required|exists:products,id',
         ]);
-
 
         if ($validator->fails()) {
             return response()->json([

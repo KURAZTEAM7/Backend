@@ -206,7 +206,8 @@ class VendorController extends Controller
     /**
      * @authenticated
      **/
-    public function orders(): JsonResponse {
+    public function orders(): JsonResponse
+    {
         $vendor = auth()->user()->vendor;
 
         if (! $vendor) {

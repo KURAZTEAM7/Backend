@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string("status")->default("Pending");
-            $table->unsignedBigInteger("user_id");
+            $table->string('status')->default('Pending');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedInteger('product_id');
             $table->decimal('price_when_ordered', 10, 2);
             $table->timestamps();

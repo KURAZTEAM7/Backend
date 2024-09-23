@@ -41,7 +41,8 @@ class Vendor extends Model
         return $this->hasMany(Product::class)->chaperone();
     }
 
-    public function orders(): HasManyThrough {
+    public function orders(): HasManyThrough
+    {
         return $this->hasManyThrough(Order::class, Product::class);
     }
 }
