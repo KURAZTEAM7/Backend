@@ -126,7 +126,6 @@ class VendorController extends Controller
             'phone_number' => 'required|string|max:15',
             'zone' => 'required|string|max:255',
             'region' => 'required|string|max:255',
-            'tin_number' => 'required|string|unique:vendors,tin_number|size:10',
         ]);
 
         if ($validator->fails()) {
