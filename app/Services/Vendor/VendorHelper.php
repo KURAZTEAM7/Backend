@@ -101,8 +101,9 @@ class VendorHelper
 
             $returned = self::mapResponse($vendorDetails);
 
-            if ($returned['store_name'])
+            if ($returned['store_name']) {
                 return $returned;
+            }
 
             $response = Http::withHeaders([
                 'Referer' => 'https://etrade.gov.et/business-license-checker',

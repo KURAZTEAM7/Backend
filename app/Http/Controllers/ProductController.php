@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Services\Product\ProductHelper;
 use Illuminate\Http\JsonResponse;
-use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\View\View;
 
 class ProductController extends Controller
 {
@@ -31,7 +31,7 @@ class ProductController extends Controller
 
         return view('product', [
             'product' => $product,
-            'similar' => $similar
+            'similar' => $similar,
         ]);
     }
 
@@ -96,6 +96,7 @@ class ProductController extends Controller
         if ($request->filled('barcode')) {
             $barcodeQuery = $request->input('barcode');
             $products = ProductHelper::levenshtein_search($barcodeQuery, 'barcode_upc', 'barcode_eac');
+
             return response()->json($products);
         }
 
@@ -103,8 +104,9 @@ class ProductController extends Controller
         $minPrice = $request->input('min');
         $maxPrice = $request->input('max');
 
-        if (!$query)
+        if (! $query) {
             return response()->json([], 200);
+        }
 
         // Convert query string into an array of tags
         $tags = explode(' ', $query);
@@ -112,18 +114,20 @@ class ProductController extends Controller
         $results = Product::where(function ($query) use ($tags) {
             foreach ($tags as $tag) {
                 $tag = strtolower($tag);
-                $query->orWhereRaw('LOWER(tags) LIKE ?', ['%' . $tag . '%'])
-                    ->orWhereRaw('LOWER(title) LIKE ?', ['%' . $tag . '%'])
-                    ->orWhereRaw('LOWER(description) LIKE ?', ['%' . $tag . '%'])
-                    ->orWhereRaw('LOWER(model) LIKE ?', ['%' . $tag . '%'])
-                    ->orWhereRaw('LOWER(brand) LIKE ?', ['%' . $tag . '%']);
+                $query->orWhereRaw('LOWER(tags) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(title) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(description) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(model) LIKE ?', ['%'.$tag.'%'])
+                    ->orWhereRaw('LOWER(brand) LIKE ?', ['%'.$tag.'%']);
             }
         });
 
-        if ($minPrice)  // Apply price filtering if 'min' or 'max' are provided
+        if ($minPrice) {  // Apply price filtering if 'min' or 'max' are provided
             $results->where('price', '>=', $minPrice);
-        if ($maxPrice)
+        }
+        if ($maxPrice) {
             $results->where('price', '<=', $maxPrice);
+        }
 
         $results = $results->get();
 

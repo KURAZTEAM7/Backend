@@ -44,7 +44,7 @@ class ProductSeeder extends Seeder
                 $product->description = $randomProduct['description'];
             } else {
                 // Fallback to Faker-generated data
-                $product->title = $faker->unique()->word . ' ' . $faker->randomElement(['Phone', 'Laptop', 'Tablet', 'Camera', 'Headphones']);
+                $product->title = $faker->unique()->word.' '.$faker->randomElement(['Phone', 'Laptop', 'Tablet', 'Camera', 'Headphones']);
                 $product->description = $faker->sentence(10);
             }
 

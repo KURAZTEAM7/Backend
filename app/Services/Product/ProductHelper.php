@@ -40,17 +40,16 @@ class ProductHelper
         }, $productsWithDistance);
     }
 
-
     public static function findSimilar($product)
     {
         $products = Product::where('category_id', $product->category_id)
             ->whereNot('product_id', $product->product_id)
             ->where(function ($query) use ($product) {
-                $query->orWhereRaw('LOWER(tags) like ?', ['%' . strtolower($product->tags) . '%'])
-                    ->orWhereRaw('LOWER(title) like ?', ['%' . strtolower($product->title) . '%'])
-                    ->orWhereRaw('LOWER(description) like ?', ['%' . strtolower($product->description) . '%'])
-                    ->orWhereRaw('LOWER(model) like ?', ['%' . strtolower($product->model) . '%'])
-                    ->orWhereRaw('LOWER(brand) like ?', ['%' . strtolower($product->brand) . '%'])
+                $query->orWhereRaw('LOWER(tags) like ?', ['%'.strtolower($product->tags).'%'])
+                    ->orWhereRaw('LOWER(title) like ?', ['%'.strtolower($product->title).'%'])
+                    ->orWhereRaw('LOWER(description) like ?', ['%'.strtolower($product->description).'%'])
+                    ->orWhereRaw('LOWER(model) like ?', ['%'.strtolower($product->model).'%'])
+                    ->orWhereRaw('LOWER(brand) like ?', ['%'.strtolower($product->brand).'%'])
                     ->limit(10);
             })->get();
 
