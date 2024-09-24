@@ -26,12 +26,7 @@ class ProductController extends Controller
             ], 422);
         }
 
-        $similar = ProductHelper::findSimilar($product);
-
-        return response()->json([
-            'product' => $product,
-            'similar' => $similar,
-        ]);
+        return response()->json($product, 200);
     }
 
     /**
