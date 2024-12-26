@@ -26,23 +26,23 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: xlo
+                  example: hgrschznmlotjoxnhaghkw
                 middle_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: drdmjqgzor
+                  example: xyed
                 last_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: snikllqfdecgcrruqfzyyc
+                  example: rhpz
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: dcarter@example.org
+                  example: breitenberg.danika@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
-                  example: GEX9|.rGz
+                  example: 'OFTBP/(%Dx6r?N3#p='
                 picture:
                   type: string
                   format: binary
@@ -73,11 +73,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: willow.rogahn@example.org
+                  example: jbode@example.org
                 password:
                   type: string
                   description: ''
-                  example: ',sCnIGNh.Jsmky'
+                  example: '!:{HV#&O|'
               required:
                 - email
                 - password
@@ -110,15 +110,15 @@ paths:
                 store_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: oxnrhzshhyquxcgtdwhcv
+                  example: cvkjw
                 phone_number:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: bfzhjeup
+                  example: vk
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: alyce.windler@example.com
+                  example: bayer.cecelia@example.net
                 logo:
                   type: string
                   format: binary
@@ -126,31 +126,31 @@ paths:
                 zone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: okzdygjqpklxchkcu
+                  example: ue
                 region:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qh
+                  example: uxvrneonyrlrxweoiaqztqga
                 google_map_location:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: eymehrynwulledp
+                  example: ib
                 website:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: hagcgkldqtlvjtixpgutn
+                  example: ywqbwltudvusmhrgwqqtwqny
                 telegram:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: loshldl
+                  example: xbczeyzalzj
                 whatsapp:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lrsyihh
+                  example: aroqopepqfdk
                 tin_number:
                   type: string
                   description: 'Must be 10 characters.'
-                  example: vovrdkocqq
+                  example: jncllyljue
                 license:
                   type: string
                   format: binary
@@ -158,7 +158,7 @@ paths:
                 description:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: 'Dolores voluptas non molestias suscipit.'
+                  example: 'Tempora ullam omnis nihil mollitia unde non fugiat.'
               required:
                 - store_name
                 - phone_number
@@ -185,7 +185,7 @@ paths:
                 license_number:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: zyyzooryadx
+                  example: tczzgizejxdyp
                 logo:
                   type: string
                   format: binary
@@ -243,7 +243,7 @@ paths:
         in: path
         name: name
         description: ''
-        example: molestiae
+        example: enim
         required: true
         schema:
           type: string
@@ -316,7 +316,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the vendor.'
-        example: 2
+        example: 18
         required: true
         schema:
           type: integer
@@ -375,7 +375,7 @@ paths:
         in: path
         name: category_slug
         description: 'The slug of the category.'
-        example: blanditiis
+        example: cum
         required: true
         schema:
           type: string
@@ -386,15 +386,30 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        422:
           description: ''
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                example: []
+                type: object
+                example:
+                  message: 'Validation failed'
+                  errors:
+                    barcode:
+                      - 'The barcode field must be at least 5 characters.'
+                properties:
+                  message:
+                    type: string
+                    example: 'Validation failed'
+                  errors:
+                    type: object
+                    properties:
+                      barcode:
+                        type: array
+                        example:
+                          - 'The barcode field must be at least 5 characters.'
+                        items:
+                          type: string
       tags:
         - Endpoints
       requestBody:
@@ -407,19 +422,19 @@ paths:
                 barcode:
                   type: string
                   description: 'Must be at least 5 characters. Must not be greater than 15 characters.'
-                  example: gvtgz
+                  example: vcxt
                 query:
                   type: string
                   description: 'Must be at least 1 character.'
-                  example: oobyqwrjuvbgyybamcii
+                  example: nazwvsoqnjyvzhbqmaqxvprmuhulwqwclmyjbzrnwucsbdhnqdhaazqqdui
                 min:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 8
+                  example: 57
                 max:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 56
+                  example: 50
       security: []
   /api/product/list:
     get:
@@ -459,15 +474,15 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qatsrqcxnk
+                  example: iuwuqkiso
                 description:
                   type: string
                   description: ''
-                  example: 'Itaque tempora vitae est tempore alias et alias possimus.'
+                  example: 'Nihil id velit dolore.'
                 price:
                   type: number
                   description: ''
-                  example: 272.67394104
+                  example: 140409.62257481
                 flexible_pricing:
                   type: boolean
                   description: ''
@@ -475,11 +490,11 @@ paths:
                 brand:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: sint
                 model:
                   type: string
                   description: ''
-                  example: explicabo
+                  example: nemo
                 images:
                   type: array
                   description: 'Must be an image. Must not be greater than 2048 kilobytes.'
@@ -489,15 +504,15 @@ paths:
                 barcode_upc:
                   type: string
                   description: 'image validation. Must be 12 characters.'
-                  example: uyxmtysrqlxf
+                  example: drgpeqfhhfja
                 barcode_eac:
                   type: string
                   description: 'Must be 13 characters.'
-                  example: vnppnrvglvlyk
+                  example: jxgdwisxwmbnc
                 remaining_stock:
                   type: integer
                   description: 'Must be at least 0.'
-                  example: 60
+                  example: 32
                 tags:
                   type: object
                   description: ''
@@ -506,7 +521,7 @@ paths:
                 category_id:
                   type: string
                   description: ''
-                  example: qui
+                  example: et
               required:
                 - title
                 - price
@@ -548,7 +563,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product.'
-        example: 18
+        example: 12
         required: true
         schema:
           type: integer
@@ -604,7 +619,7 @@ paths:
                 product_id:
                   type: string
                   description: ''
-                  example: illum
+                  example: dolor
               required:
                 - product_id
 tags:
