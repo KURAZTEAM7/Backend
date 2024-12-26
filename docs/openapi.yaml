@@ -26,27 +26,33 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: xlo
+                  example: jpvwmnedazpshowbzojzuhd
+                  nullable: false
                 middle_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: drdmjqgzor
+                  example: fiqnfexzdtzxj
+                  nullable: false
                 last_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: snikllqfdecgcrruqfzyyc
+                  example: wml
+                  nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: dcarter@example.org
+                  example: pfranecki@example.org
+                  nullable: false
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
-                  example: GEX9|.rGz
+                  example: '0qe+s==9@,Y'
+                  nullable: false
                 picture:
                   type: string
                   format: binary
                   description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
               required:
                 - first_name
                 - middle_name
@@ -73,11 +79,13 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: willow.rogahn@example.org
+                  example: retha34@example.org
+                  nullable: false
                 password:
                   type: string
                   description: ''
-                  example: ',sCnIGNh.Jsmky'
+                  example: '46PY:{~C'
+                  nullable: false
               required:
                 - email
                 - password
@@ -110,55 +118,68 @@ paths:
                 store_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: oxnrhzshhyquxcgtdwhcv
+                  example: oeoljnfogplwhbyyv
+                  nullable: false
                 phone_number:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: bfzhjeup
+                  example: ji
+                  nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: alyce.windler@example.com
+                  example: louvenia83@example.org
+                  nullable: false
                 logo:
                   type: string
                   format: binary
                   description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
                 zone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: okzdygjqpklxchkcu
+                  example: rvdxflswjlwcab
+                  nullable: false
                 region:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qh
+                  example: izkxt
+                  nullable: false
                 google_map_location:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: eymehrynwulledp
+                  example: plaxcmvkadzdp
+                  nullable: true
                 website:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: hagcgkldqtlvjtixpgutn
+                  example: qundapnrczn
+                  nullable: true
                 telegram:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: loshldl
+                  example: dgbgllmcn
+                  nullable: true
                 whatsapp:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lrsyihh
+                  example: ujgdwdw
+                  nullable: true
                 tin_number:
                   type: string
                   description: 'Must be 10 characters.'
-                  example: vovrdkocqq
+                  example: crfpwmyvuj
+                  nullable: false
                 license:
                   type: string
                   format: binary
                   description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+                  nullable: false
                 description:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: 'Dolores voluptas non molestias suscipit.'
+                  example: 'Dolorem rerum aut quam ex.'
+                  nullable: true
               required:
                 - store_name
                 - phone_number
@@ -185,15 +206,18 @@ paths:
                 license_number:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: zyyzooryadx
+                  example: jc
+                  nullable: false
                 logo:
                   type: string
                   format: binary
                   description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
                 license:
                   type: string
                   format: binary
                   description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+                  nullable: false
               required:
                 - license_number
                 - license
@@ -243,7 +267,7 @@ paths:
         in: path
         name: name
         description: ''
-        example: molestiae
+        example: non
         required: true
         schema:
           type: string
@@ -316,7 +340,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the vendor.'
-        example: 2
+        example: 10
         required: true
         schema:
           type: integer
@@ -375,7 +399,7 @@ paths:
         in: path
         name: category_slug
         description: 'The slug of the category.'
-        example: blanditiis
+        example: dolorem
         required: true
         schema:
           type: string
@@ -386,15 +410,30 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        422:
           description: ''
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                example: []
+                type: object
+                example:
+                  message: 'Validation failed'
+                  errors:
+                    barcode:
+                      - 'The barcode field must be at least 5 characters.'
+                properties:
+                  message:
+                    type: string
+                    example: 'Validation failed'
+                  errors:
+                    type: object
+                    properties:
+                      barcode:
+                        type: array
+                        example:
+                          - 'The barcode field must be at least 5 characters.'
+                        items:
+                          type: string
       tags:
         - Endpoints
       requestBody:
@@ -407,19 +446,23 @@ paths:
                 barcode:
                   type: string
                   description: 'Must be at least 5 characters. Must not be greater than 15 characters.'
-                  example: gvtgz
+                  example: tp
+                  nullable: true
                 query:
                   type: string
                   description: 'Must be at least 1 character.'
-                  example: oobyqwrjuvbgyybamcii
+                  example: qsutlidumksisnlbpeqsexadymzlprrdtjai
+                  nullable: true
                 min:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 8
+                  example: 27
+                  nullable: true
                 max:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 56
+                  example: 0
+                  nullable: true
       security: []
   /api/product/list:
     get:
@@ -459,27 +502,33 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qatsrqcxnk
+                  example: fu
+                  nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Itaque tempora vitae est tempore alias et alias possimus.'
+                  example: 'Et optio sapiente et voluptatibus molestiae voluptatem.'
+                  nullable: true
                 price:
                   type: number
                   description: ''
-                  example: 272.67394104
+                  example: 215292.3165239
+                  nullable: false
                 flexible_pricing:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
+                  nullable: false
                 brand:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: tenetur
+                  nullable: true
                 model:
                   type: string
                   description: ''
-                  example: explicabo
+                  example: voluptatem
+                  nullable: true
                 images:
                   type: array
                   description: 'Must be an image. Must not be greater than 2048 kilobytes.'
@@ -489,24 +538,29 @@ paths:
                 barcode_upc:
                   type: string
                   description: 'image validation. Must be 12 characters.'
-                  example: uyxmtysrqlxf
+                  example: eeferzvmfirv
+                  nullable: true
                 barcode_eac:
                   type: string
                   description: 'Must be 13 characters.'
-                  example: vnppnrvglvlyk
+                  example: wbbirpyrmfguj
+                  nullable: true
                 remaining_stock:
                   type: integer
                   description: 'Must be at least 0.'
-                  example: 60
+                  example: 66
+                  nullable: false
                 tags:
                   type: object
                   description: ''
                   example: null
+                  nullable: true
                   properties: {  }
                 category_id:
                   type: string
-                  description: ''
-                  example: qui
+                  description: 'The <code>id</code> of an existing record in the categories table.'
+                  example: pariatur
+                  nullable: false
               required:
                 - title
                 - price
@@ -548,7 +602,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product.'
-        example: 18
+        example: 10
         required: true
         schema:
           type: integer
@@ -603,8 +657,9 @@ paths:
               properties:
                 product_id:
                   type: string
-                  description: ''
-                  example: illum
+                  description: 'The <code>id</code> of an existing record in the products table.'
+                  example: reiciendis
+                  nullable: false
               required:
                 - product_id
 tags:
