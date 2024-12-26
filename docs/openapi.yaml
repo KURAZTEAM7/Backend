@@ -26,23 +26,23 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: xlo
+                  example: 'n'
                 middle_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: drdmjqgzor
+                  example: gfxvfmrovdahtuguviinhqfa
                 last_name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: snikllqfdecgcrruqfzyyc
+                  example: qsnpwgzyeu
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: dcarter@example.org
+                  example: ofadel@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 64 characters.'
-                  example: GEX9|.rGz
+                  example: 'R0k*AH[zR'
                 picture:
                   type: string
                   format: binary
@@ -73,11 +73,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: willow.rogahn@example.org
+                  example: wolf.weston@example.com
                 password:
                   type: string
                   description: ''
-                  example: ',sCnIGNh.Jsmky'
+                  example: "pVLK./.<W'ss."
               required:
                 - email
                 - password
@@ -110,15 +110,15 @@ paths:
                 store_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: oxnrhzshhyquxcgtdwhcv
+                  example: xarkqx
                 phone_number:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: bfzhjeup
+                  example: uyizxes
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: alyce.windler@example.com
+                  example: leffler.alta@example.org
                 logo:
                   type: string
                   format: binary
@@ -126,31 +126,31 @@ paths:
                 zone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: okzdygjqpklxchkcu
+                  example: lgozmvlqcv
                 region:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qh
+                  example: qdfozuhvgtimxviqxep
                 google_map_location:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: eymehrynwulledp
+                  example: kxtqhtyqcizcblouuatclysx
                 website:
                   type: string
                   description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: hagcgkldqtlvjtixpgutn
+                  example: vzaisbmxxvygoqczll
                 telegram:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: loshldl
+                  example: ewgbfqlsiuiywrikdohf
                 whatsapp:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lrsyihh
+                  example: bwashkv
                 tin_number:
                   type: string
                   description: 'Must be 10 characters.'
-                  example: vovrdkocqq
+                  example: flaetixngu
                 license:
                   type: string
                   format: binary
@@ -158,7 +158,7 @@ paths:
                 description:
                   type: string
                   description: 'Must not be greater than 1000 characters.'
-                  example: 'Dolores voluptas non molestias suscipit.'
+                  example: 'Dolorum voluptas voluptas et quod.'
               required:
                 - store_name
                 - phone_number
@@ -185,7 +185,7 @@ paths:
                 license_number:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: zyyzooryadx
+                  example: lidcshixhlyuxkzlvakc
                 logo:
                   type: string
                   format: binary
@@ -243,7 +243,7 @@ paths:
         in: path
         name: name
         description: ''
-        example: molestiae
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -316,7 +316,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the vendor.'
-        example: 2
+        example: 8
         required: true
         schema:
           type: integer
@@ -375,7 +375,7 @@ paths:
         in: path
         name: category_slug
         description: 'The slug of the category.'
-        example: blanditiis
+        example: expedita
         required: true
         schema:
           type: string
@@ -407,19 +407,19 @@ paths:
                 barcode:
                   type: string
                   description: 'Must be at least 5 characters. Must not be greater than 15 characters.'
-                  example: gvtgz
+                  example: oinifddhlqwow
                 query:
                   type: string
                   description: 'Must be at least 1 character.'
-                  example: oobyqwrjuvbgyybamcii
+                  example: kpnygwvfjdyjwioclowyqlijwhgkytxxbmrnzhymdmovuihwgygfptnkcfjjmvbjlvgeemmyklxjzfhrevk
                 min:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 8
+                  example: 45
                 max:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 56
+                  example: 37
       security: []
   /api/product/list:
     get:
@@ -459,15 +459,15 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qatsrqcxnk
+                  example: qqqaeextjldrqje
                 description:
                   type: string
                   description: ''
-                  example: 'Itaque tempora vitae est tempore alias et alias possimus.'
+                  example: 'Distinctio qui nemo possimus ipsum architecto sit.'
                 price:
                   type: number
                   description: ''
-                  example: 272.67394104
+                  example: 0.6
                 flexible_pricing:
                   type: boolean
                   description: ''
@@ -475,11 +475,11 @@ paths:
                 brand:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: dolorem
                 model:
                   type: string
                   description: ''
-                  example: explicabo
+                  example: qui
                 images:
                   type: array
                   description: 'Must be an image. Must not be greater than 2048 kilobytes.'
@@ -489,15 +489,15 @@ paths:
                 barcode_upc:
                   type: string
                   description: 'image validation. Must be 12 characters.'
-                  example: uyxmtysrqlxf
+                  example: adgvoqowawxw
                 barcode_eac:
                   type: string
                   description: 'Must be 13 characters.'
-                  example: vnppnrvglvlyk
+                  example: vxbsnfkxckaxm
                 remaining_stock:
                   type: integer
                   description: 'Must be at least 0.'
-                  example: 60
+                  example: 28
                 tags:
                   type: object
                   description: ''
@@ -506,7 +506,7 @@ paths:
                 category_id:
                   type: string
                   description: ''
-                  example: qui
+                  example: quo
               required:
                 - title
                 - price
@@ -548,7 +548,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product.'
-        example: 18
+        example: 16
         required: true
         schema:
           type: integer
@@ -604,7 +604,7 @@ paths:
                 product_id:
                   type: string
                   description: ''
-                  example: illum
+                  example: voluptatem
               required:
                 - product_id
 tags:
